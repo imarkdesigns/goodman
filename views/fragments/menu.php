@@ -42,3 +42,24 @@ $mobMenu = [
     </nav>
 
 </div>
+
+<?php if ( is_page([ 9,11,13,15 ]) ) : ?>
+<div data-fragment="localnav" class="uk-background-secondary">
+    <div class="uk-container uk-container-expand">
+
+        <div class="uk-flex uk-flex-between uk-flex-middle" uk-overflow-auto>
+            <div></div>
+            <div>
+                <ul class="uk-subnav">
+                    <li <?php echo ( get_the_ID() == 9 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 9 ); ?>">For Sale</a></li>
+                    <li <?php echo ( get_the_ID() == 11 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 11 ); ?>">For Lease</a></li>
+                    <li <?php echo ( get_the_ID() == 13 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 13 ); ?>">Past Transactions</a></li>
+                    <li><a href="<?php  ?>">New Property Alerts</a></li>
+                    <li <?php echo ( get_the_ID() == 15 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 15 ); ?>">Managed Properties</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<?php endif;

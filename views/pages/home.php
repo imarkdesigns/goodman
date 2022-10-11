@@ -8,7 +8,7 @@
                     <h2>Properties For Sale</h2>
                 </div>
                 <div>
-                    <a href="#">View All Properties</a>
+                    <a href="<?php echo get_permalink( 9 ) ?>">View All Properties</a>
                 </div>
             </div>
             <div tabindex="-1" uk-slider>
@@ -49,7 +49,7 @@
                     <h2>Properties For Lease</h2>
                 </div>
                 <div>
-                    <a href="#">View All Properties</a>
+                    <a href="<?php echo get_permalink( 11 ) ?>">View All Properties</a>
                 </div>
             </div>
             <div tabindex="-1" uk-slider>
@@ -90,7 +90,7 @@
                     <h2>Properties We Manage</h2>
                 </div>
                 <div>
-                    <a href="#">View All Managed Properties</a>
+                    <a href="<?php echo get_permalink( 15 ) ?>">View All Managed Properties</a>
                 </div>
             </div>
             <div class="grid-wrapper | uk-light">

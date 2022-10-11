@@ -52,7 +52,7 @@
         border-radius: 0 0 3px 3px;
 
         .uk-navbar-dropdown-nav > li {
-            background-color: rgba(#FFF,.9);
+            background-color: rgba(#FFF,.95);
             padding: 3px;
             // border-top: 1px solid rgba(#888,.25);
             box-sizing: border-box;
@@ -85,7 +85,7 @@
 
         background-color: transparent;
         font-family: $face-regular;
-        font-size: .625rem;
+        font-size: .75rem;
         color: rgba(#000,.9);
         text-transform: uppercase;
         border: 0;
@@ -178,4 +178,47 @@
             .uk-navbar-right { padding-right: 30px }
         }
     }
+}
+
+[data-fragment="localnav"] {
+
+    &.uk-background-secondary {
+        background-color: rgba(#000,1);
+    }
+
+    .uk-flex {
+        height: 50px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .uk-subnav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0;
+
+        > li > a {
+            font-size: .75rem;
+            color: rgba(#FFF,.9);
+            text-transform: none;
+        }
+
+        > li > a:hover {
+            color: rgba(#FFF,.75);
+        }
+
+        > .uk-active > a {
+            font-weight: 600;
+            color: rgba(#FFF,.9);
+        }        
+    }
+
+    @media ( min-width: 1200px ) {
+
+        .uk-subnav {
+            justify-content: flex-end;
+            margin-right: 0;
+        }
+
+    }
+
 }

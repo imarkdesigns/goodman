@@ -53,7 +53,13 @@ add_action('wp_enqueue_scripts', function() {
                 break;
 
         }
-        wp_enqueue_style( 'page', _css.$pageName.'.css' );
+        if ( is_page([ 9,11,13,15 ]) ) {
+            wp_enqueue_style( 'page', _css.'main.css' );
+            wp_enqueue_style( 'page', _css.$pageName.'.css' );
+        } else {
+            wp_enqueue_style( 'page', _css.$pageName.'.css' );
+        }
+
 
     }
 
