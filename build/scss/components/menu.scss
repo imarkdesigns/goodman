@@ -1,0 +1,181 @@
+[data-fragment=menu] {
+    .uk-logo {
+        background-image: url(#{$img}/logo-goodman_x1.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 30px;
+        white-space: nowrap;
+        @include size(120.5px, 30px);
+        @include hideText();
+    }
+
+    .uk-navbar {
+        position: relative;
+        background-color: rgba(#FFF,1);
+        height: 80px;
+
+        .uk-navbar-left { padding-left: 15px }
+        .uk-navbar-right { padding-right: 15px }
+    }
+
+    .uk-navbar-nav {
+        gap: 15px;
+
+        > li > a {
+            font-family: $system;
+            font-weight: 400;
+            color: rgba(#000,.9);
+            text-transform: none;
+            padding: 0;
+        }
+
+        // isHover
+        > li > a:focus,
+        > li > a:hover {
+            color: rgba($btn-link,.9);
+        }
+
+        // isActive
+        > li.current-menu-parent a,
+        > li.current-menu-item a {
+            color: rgba($primary-clr,.9);
+        }
+    }
+
+    .uk-navbar-dropdown {
+        background: none;
+        font-family: $system;
+        margin-top: 3px;
+        min-width: 150px;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0 0 3px 3px;
+
+        .uk-navbar-dropdown-nav > li {
+            background-color: rgba(#FFF,.9);
+            padding: 3px;
+            // border-top: 1px solid rgba(#888,.25);
+            box-sizing: border-box;
+
+            &:first-child { border-top: 0 }
+            &:last-child { border-radius: 0 0 3px 3px }
+
+            &:focus,
+            &:hover {
+                margin-top: 0;
+
+                > a { 
+                    background-color: $primary-clr;
+                    color: rgba(#FFF,.9);
+                    border-radius: 3px;
+                }
+            }
+
+            > a {
+                color: #000;
+                line-height: normal;
+                padding: .75em 1em;
+            }
+        }
+    }
+
+    // Mobile Menu
+    button.mobile-menu {
+        gap: 5px;
+
+        background-color: transparent;
+        font-family: $face-regular;
+        font-size: .625rem;
+        color: rgba(#000,.9);
+        text-transform: uppercase;
+        border: 0;
+        // font-variant-caps: all-small-caps;
+        // @include sharpText();
+
+        > span {
+            min-height: auto;
+        }
+
+        svg {
+            position: relative;
+            top: 4px;
+
+            .line-1 {
+                y: 0;
+                width: 13px;
+            }
+
+            .line-2 {
+                y: 5;
+                width: 18px;
+            }
+
+            .line-3 {
+                y: 10;
+                width: 8px;
+                opacity: 1;
+            }
+
+            .line-4 {
+                y: 15;
+                width: 10px;
+                opacity: 0
+            }
+        }
+    }
+
+    // Mobile Menu
+    .navbar-mobile-menu {
+        background-color: rgba(#FFF,.95);
+        backdrop-filter: saturate(180%) blur(10px);
+        -webkit-overflow-scrolling: touch;
+
+        .uk-nav {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0;
+
+            line-height: normal;
+
+            li {
+                border-top: 1px solid rgba(#888,.25);
+
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+
+            li a {
+                color: rgba(#000,1);
+                padding-block: 1em;
+                padding-left: .5em;
+
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                outline: none;
+                border-radius: 0;
+            }
+        }
+
+        .uk-search {
+            margin-bottom: 15px;
+
+            input {
+                border-radius: 2px;
+                border-color: rgba(#FFF,.25);
+            }
+        }
+    }    
+
+    @media screen and ( min-width: 960px ) {
+        .uk-logo {
+            background-image: url(#{$img}/logo-goodman_x2.png);
+            background-size: auto 60px;
+            @include size(241px, 60px);
+        }
+
+        .uk-navbar {
+            .uk-navbar-left { padding-left: 30px }
+            .uk-navbar-right { padding-right: 30px }
+        }
+    }
+}

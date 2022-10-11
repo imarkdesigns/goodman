@@ -1,0 +1,23 @@
+//* Import Common Styles
+@import 'common/fonts', 
+        'common/mixins', 
+        'common/global';
+
+//* Import Components Styles
+@import 'components/footer',
+        'components/header',
+        'components/menu';
+
+//* Import Resets Styles
+@import 'common/reset-wp',
+        'common/reset-uikit';
+
+
+// Set max-width to all parent containers
+[class="main"],
+[data-fragment=hero],
+[data-fragment=footer],
+[data-fragment=menu] {
+    max-width: 1920px;
+    margin-inline: auto;
+}

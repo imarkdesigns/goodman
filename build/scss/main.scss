@@ -1,0 +1,256 @@
+// Import mixins
+@import 'common/mixins';
+
+.for-sale-slider,
+.for-lease-slider {
+
+    .uk-grid-headings {
+        h2 {
+            font-size: clamp(1.5rem, 1.375rem + 0.625vw, 2rem);
+            font-weight: 600;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -.035em;
+            margin: 0;
+        }
+
+        a {
+            font-size: .875rem;
+            color: $btn-link;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    .uk-slider-items .uk-card {
+
+        .uk-card-media-top img {
+            border-radius: 5px;
+        }
+
+        .uk-card-body {
+            padding: 15px 0;
+        }
+
+        .uk-card-title {
+            font-size: 1rem;
+            // text-transform: uppercase;
+            line-height: 1.2;
+            margin-block: 15px;
+        }
+
+        small, a {
+            display: inline-block;
+        }
+
+        small {
+            font-size: .875rem;
+            color: #888;
+            @include sharpText();
+        }
+
+        a {
+            font-size: .875rem;
+            color: $btn-link;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+    }
+
+    .uk-slidenav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primary-clr,1);
+        color: rgba(#FFF,.9);
+        // max-width: 100%;
+        @include size(42px);
+        padding: 1em;
+        border-radius: 50%;
+
+        svg {
+            width: 11px;
+            height: 11px;
+
+            polyline { stroke-width: 3 }
+        }
+
+        &.uk-slidenav-next {
+            top: calc(50% - 75px);
+            left: auto !important;
+            right: 5px;
+        }
+
+        &.uk-slidenav-previous {
+            top: calc(50% - 75px);
+            left: 5px;
+        }
+    }
+
+    @media screen and ( min-width: 640px ) {
+
+        .uk-slider-items .uk-card .uk-card-title {
+            font-size: 1.125rem;
+        }
+
+        .uk-slidenav {
+            @include size(52px);
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            &.uk-slidenav-next {
+                top: calc(50% - 70px);
+                right: calc( -52px / 2 );
+            }
+
+            &.uk-slidenav-previous {
+                top: calc(50% - 70px);
+                left: calc( -52px / 2 );
+            }
+        }
+    }
+}
+
+.managed-properties {
+
+    .uk-grid-headings {
+        h2 {
+            font-size: clamp(1.5rem, 1.375rem + 0.625vw, 2rem);
+            font-weight: 600;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -.035em;
+            margin: 0;
+        }
+
+        a {
+            font-size: .875rem;
+            color: $btn-link;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    .grid-wrapper {
+        display: flex;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        overflow: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+
+        figure {
+            margin: 0;
+        }
+
+        canvas {
+            width: 640px;
+            height: 360px;
+        }
+
+        .grid-item-1,
+        .grid-item-2,
+        .grid-item-3,
+        .grid-item-4,
+        .grid-item-5,
+        .grid-item-6,
+        .grid-item-7 { flex: 1 0 360px }
+
+        .uk-overlay-primary {
+            background-color: transparent;
+            background: linear-gradient( to top, rgba(#000,.75), rgba(#000,0) );
+        }
+
+        .uk-overlay {
+            small {
+                display: block;
+                font-size: .875rem;
+                color: #888;
+            }
+
+            h3 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                line-height: 1;
+                margin: 15px 0 0;
+            }
+        }
+
+    }
+
+    @media screen and ( min-width: 640px ) {
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+
+            canvas {
+                width: calc( (100% - 10px) / 2 );
+            }
+
+            .grid-item-1 { grid-area: 1 / 1 / 4 / 2;
+                canvas { height: 590px; }
+            }
+            .grid-item-2 { grid-area: 1 / 2 / 3 / 3;
+                canvas { height: 390px }
+            }
+            .grid-item-3 { grid-area: 4 / 1 / 6 / 2;
+                canvas { height: 390px }
+            }
+            .grid-item-4 { grid-area: 3 / 2 / 4 / 3;
+                canvas { height: 190px }
+            }
+            .grid-item-5 { grid-area: 4 / 2 / 6 / 3;
+                canvas { height: 390px }
+            }
+            .grid-item-6 { grid-area: 6 / 1 / 7 / 2;
+                canvas { height: 190px }
+            }
+            .grid-item-7 { grid-area: 6 / 2 / 7 / 3;
+                canvas { height: 190px }
+            }
+        }
+    }
+
+    @media screen and ( min-width: 960px ) {
+        .grid-wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            canvas {
+                width: calc( (100% - 10px) / 3 );
+            }
+
+            .grid-item-1 { grid-area: 1 / 1 / 4 / 2; 
+                canvas { height: 620px; }
+            }
+            .grid-item-2 { grid-area: 1 / 2 / 3 / 3;
+                canvas { height: 410px }
+            }
+            .grid-item-3 { grid-area: 1 / 3 / 3 / 4;
+                canvas { height: 410px }
+            }
+            .grid-item-4 { grid-area: 4 / 1 / 5 / 2;
+                canvas { height: 200px }
+            }
+            .grid-item-5 { grid-area: 3 / 2 / 5 / 3;
+                canvas { height: 410px }
+            }
+            .grid-item-6 { grid-area: 3 / 3 / 4 / 4;
+                canvas { height: 200px }
+            }
+            .grid-item-7 { grid-area: 4 / 3 / 5 / 4;
+                canvas { height: 200px }
+            }
+        }
+    }
+
+}
