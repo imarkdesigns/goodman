@@ -53,8 +53,8 @@ add_action('wp_enqueue_scripts', function() {
                 break;
 
         }
-        if ( is_page([ 9,11,13,15 ]) ) {
-            wp_enqueue_style( 'page', _css.'main.css' );
+        if ( is_page([ 9,11,13,15,19 ]) ) {
+            wp_enqueue_style( 'page-main', _css.'main.css' );
             wp_enqueue_style( 'page', _css.$pageName.'.css' );
         } else {
             wp_enqueue_style( 'page', _css.$pageName.'.css' );
@@ -63,7 +63,7 @@ add_action('wp_enqueue_scripts', function() {
     }
 
     elseif ( is_singular( 'properties' ) ) {
-        wp_enqueue_style( 'page', _css.'main.css' );
+        wp_enqueue_style( 'page-main', _css.'main.css' );
         wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
 

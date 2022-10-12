@@ -1,3 +1,64 @@
 // Import mixins
 @import 'common/mixins';
 
+.team-list {
+
+    h2 {
+        font-size: clamp(1.5rem, 1.3182rem + 0.9091vw, 2rem);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .uk-grid .uk-grid-margin {
+        margin-top: 45px;
+    }
+
+    .uk-card-media-top a {
+        img {
+            // display: none;
+            width: 100%;
+            height: auto;
+            border-radius: 5px 10px 5px 0;
+            object-fit: cover;
+            transition: border-radius 300ms ease-in-out;
+        }
+
+        &:hover img {
+            border-bottom-left-radius: 50px;
+        }
+    }
+
+    h3.uk-card-title a {
+        font-size: clamp(1.125rem, 0.8977rem + 1.1364vw, 1.75rem);
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+        margin: 0;
+
+        &:hover {
+            color: lighten(#000,25%);
+        }
+    }
+
+    span.uk-text-meta {
+        // font-size: 1rem !important;
+        color: #000 !important;
+    }
+
+    @media screen and ( min-width: 640px ) {
+        
+        .uk-grid {
+            gap: 0;
+        }
+
+        .uk-card-media-top a img {
+            display: block;
+            width: 410px;
+            height: auto;
+
+        }
+
+    }
+
+
+}

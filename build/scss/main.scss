@@ -254,3 +254,52 @@
     }
 
 }
+
+.contact-form {
+
+    h2 {
+        font-size: clamp(1.5rem, 0.8636rem + 3.1818vw, 3.25rem);
+        font-weight: 700;
+        color: #000;
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: clamp(1.125rem, 0.8977rem + 1.1364vw, 1.75rem);
+        font-weight: 400;
+        color: #000;
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #000;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .contact-numbers {
+        margin-bottom: 60px;
+
+        span {
+            display: block;
+        }
+    }
+
+    .contact-address {
+        margin: 0;
+    }
+
+    .uk-background-secondary {
+        background-color: #000;
+        border-radius: 5px 10px 5px 25px;
+
+        .uk-text-right {
+            font-size: .75rem !important;
+        }
+    }
+
+}

@@ -14,11 +14,16 @@
             </div>
             <div class="cta | uk-width-1-3@m">
                 <div class="uk-panel">
-                    <a href="#" class="uk-button uk-button-primary">
-                        <span></span>
-                        Make Property <br> Viewing Appointment
+                    <a href="#" class="calendar | uk-button uk-button-primary">
+                        <span class="uk-text-left">
+                            Make Property <br> Viewing Appointment
+                        </span>
                     </a>
-                    <a href="#" class="uk-button uk-button-primary"> <span></span> Download Brochure </a>
+                    <a href="#" class="brochure | uk-button uk-button-primary"> 
+                        <span class="uk-text-left">
+                            Download Brochure
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

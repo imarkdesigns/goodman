@@ -1,4 +1,6 @@
 [data-fragment=menu] {
+    box-shadow: 0 0 5px 0 rgba(#000,.10);
+
     .uk-logo {
         background-image: url(#{$img}/logo-goodman_x1.png);
         background-repeat: no-repeat;

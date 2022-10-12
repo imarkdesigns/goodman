@@ -199,6 +199,33 @@
         max-width: none;
         padding: 1em;
         border-radius: 3px;
+        @include sharpText();
+
+        &.calendar span,
+        &.brochure span {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '';
+                position: relative;
+                display: block;
+                background-repeat: no-repeat;
+                background-size: auto 24px;
+                background-position: left center;
+                @include size(24px);
+                margin-right: 5px;
+            }
+        }
+
+        &.brochure span::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z'/%3E%3C/svg%3E");
+        }
+
+        &.calendar span::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z'/%3E%3C/svg%3E");
+        }
     }
 
     @media screen and ( min-width: 640px ) {
@@ -219,6 +246,44 @@
             justify-content: flex-end;
         }
 
+    }
+}
+
+[data-fragment="hero"].team-header,
+[data-fragment="hero"].contact-header {
+
+    h1 {
+        @include hideText();
+        margin: 0;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 0.4091rem + 5.4545vw, 4.5rem);
+        font-weight: 400;
+        // color: rgba(#101010,1);
+        line-height: 1;
+        letter-spacing: -0.05em;
+        margin-bottom: 15px;
+
+        span.uk-text-uppercase {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .uk-text-lead {
+        font-size: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
+    }
+
+    .uk-cover-container {
+        canvas {
+            min-height: 640px;
+        }
+    }
+
+    .uk-overlay-primary {
+        background-color: transparent;
+        background-image: linear-gradient( to top, rgba(#000,1), rgba(#000,.15) );
     }
 
 }
