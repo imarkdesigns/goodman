@@ -60,7 +60,11 @@ add_action('wp_enqueue_scripts', function() {
             wp_enqueue_style( 'page', _css.$pageName.'.css' );
         }
 
+    }
 
+    elseif ( is_singular( 'properties' ) ) {
+        wp_enqueue_style( 'page', _css.'main.css' );
+        wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
 
 }, 100);
