@@ -1,7 +1,7 @@
 <main id="main" class="main" role="main">
 
     <section class="gmap | uk-section uk-padding-remove">
-        <?php echo do_shortcode( '[elfsight_google_maps id="1"]' ); ?>
+        <?php echo do_shortcode( '[elfsight_google_maps id="3"]' ); ?>
     </section>
 
     <section class="managed-properties | uk-section">
