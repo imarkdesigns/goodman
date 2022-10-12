@@ -155,8 +155,8 @@
     }
 
     address {
-        font-size: 1rem;
-        font-weight: 300;
+        font-size: .875rem;
+        font-weight: 400;
         color: rgba(#666,.9);
 
         .uk-icon {
@@ -202,9 +202,21 @@
     }
 
     @media screen and ( min-width: 640px ) {
-        
+
         .uk-button {
             max-width: 280px;
+        }
+
+    }
+
+    @media screen and ( min-width: 960px ) {
+
+        .uk-grid {
+            padding-block: 150px 70px;
+        }
+
+        .cta .uk-panel {
+            justify-content: flex-end;
         }
 
     }

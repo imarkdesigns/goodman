@@ -61,7 +61,7 @@
 
         .contact-item .uk-card {
             display: flex;
-            justify-content: center;
+            // justify-content: center;
 
             .uk-cover-container img {
                 border-radius: 5px 10px 5px 25px;
@@ -115,8 +115,18 @@
     @media screen and ( min-width: 960px ) {
         .contact-wrapper {
             flex-flow: column wrap;
-        }
 
+            .uk-card-body h3.uk-card-title {
+                font-size: 1.125rem;
+            }
+
+            .contact-item .uk-card {
+                .uk-text-meta .contact-phone,
+                .uk-text-meta .contact-email {
+                    font-size: .875rem;
+                }
+            }
+        }
     }
 
 }
