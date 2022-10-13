@@ -98,4 +98,26 @@
         </div>
     </section>
 
+    <section class="router-testimonial | uk-section uk-section-large uk-background-cover" data-src="<?php echo _uri.'/resources/images/bg_router-testimonials.jpg'; ?>" uk-img>
+        <div class="uk-container uk-position-relative uk-light">
+            
+            <div class="uk-grid-large uk-flex-middle" uk-grid>
+                <div class="uk-width-2-3@m">
+                    <blockquote class="uk-width-2xlarge">
+                        <p>Our company was growing after we had purchased an existing business and we were in need of a bigger shop. <strong>Mark Goodman worked hard to find us a space that would work perfect for us.</strong>  After several months of searching, we thought we had found our ideal space, but even then they never stopped looking and found an even better space that we are currently leasing.  He continues to keep in touch to make sure that we are happy and he works to resolve any issues we may have with our landlord.  I highly recommend their services to anyone looking for space.  Mark will get the job done and will get it done right.</p>
+                        <footer><strong>Kenneth Moore</strong>, President | Custom Concepts Fabrication</footer>
+                    </blockquote>
+                </div>
+                <div class="uk-width-1-3@m">
+                    <div class="uk-panel uk-text-right">
+                        <span>What Our</span>
+                        <span>Clients</span>
+                        <span>Are Saying</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 </main>
