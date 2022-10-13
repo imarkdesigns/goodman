@@ -249,9 +249,11 @@
     }
 }
 
+[data-fragment="hero"].why-header,
 [data-fragment="hero"].team-header,
 [data-fragment="hero"].services-header,
 [data-fragment="hero"].testimonials-header,
+[data-fragment="hero"].faq-header,
 [data-fragment="hero"].contact-header {
 
     h1 {
@@ -275,6 +277,8 @@
 
     .uk-text-lead {
         font-size: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
+        font-weight: 300;
+        line-height: 1.2;
     }
 
     .uk-cover-container {
@@ -285,7 +289,8 @@
 
     .uk-overlay-primary {
         background-color: transparent;
-        background-image: linear-gradient( to top, rgba(#000,1), rgba(#000,.15) );
+        background-image: linear-gradient( to top, rgba(#000,.85), rgba(#000,.15) );
+        opacity: .9;
     }
 
     blockquote {
@@ -303,6 +308,10 @@
             background-size: contain;
             background-position: center;
             @include size(76px,46px);
+        }
+
+        footer {
+            letter-spacing: 0.05em;
         }
     }
 
