@@ -258,13 +258,22 @@
 
     h1 {
         @include hideText();
+        clip: rect(1px,1px,1px,1px);
+        clip-path: inset(0px 0px 99.9% 99.9%);
+        color: rgba(#FFF,.9);
+        overflow: hidden;
+        height: 1px;
+        width: 1px;
         margin: 0;
+        padding: 0;
+        border: 0;
     }
 
     h2 {
         font-size: clamp(1.5rem, 0.4091rem + 5.4545vw, 4.5rem);
         font-weight: 400;
         // color: rgba(#101010,1);
+        color: rgba(#FFF,.9);
         line-height: 1;
         letter-spacing: -0.05em;
         margin-bottom: 15px;
