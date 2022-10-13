@@ -287,3 +287,31 @@
     }
 
 }
+
+[data-fragment="hero"].profile-info {
+    display: flex;
+    align-items: flex-end;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include size(100%,480px);
+    padding-block: 70px;
+    box-sizing: border-box;
+
+    .uk-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0;
+    }
+}
