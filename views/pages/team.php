@@ -7,7 +7,7 @@
     <div class="uk-overlay uk-position-bottom uk-light">
         <h1>Our Team</h1>
         <h2>Meet the <br> <span class="uk-text-uppercase">Goodman Commercial Team</span></h2>
-        <div class="uk-text-lead uk-width-2xlarge">Since 2006, Mark Goodman has brokered more than 350 transactions in the Denver commercial real estate market.  He has now assembled a team of talented professionals dedicated to achieving his vision of matching quality real estate to the needs of clients looking for prime locations in the Denver metro area.</div>
+        <div class="uk-text-lead uk-width-1-1@m uk-width-1-2@l">Since 2006, Mark Goodman has brokered more than 350 transactions in the Denver commercial real estate market.  He has now assembled a team of talented professionals dedicated to achieving his vision of matching quality real estate to the needs of clients looking for prime locations in the Denver metro area.</div>
     </div>
 </header>
 

@@ -2,7 +2,6 @@
 @import 'common/mixins';
 
 .team-list {
-
     h2 {
         font-size: clamp(1.5rem, 1.3182rem + 0.9091vw, 2rem);
         font-weight: 700;
@@ -59,6 +58,75 @@
         }
 
     }
+}
 
+.services-list {
+    h2 {
+        font-size: clamp(1.5rem, 1.3182rem + 0.9091vw, 2rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .uk-card {
+        h3.uk-card-title {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 300;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-top: 30px;
+                border-top: 1px solid #000;
+            }
+        }
+    }
+}
+
+.services-list-additional {
+    &.uk-section-secondary {
+        background-color: #000;
+    }
+
+    .uk-grid {
+
+        > div:nth-child(1) { order: 0 }
+        > div:nth-child(2) { order: 1 }
+        > div:nth-child(3) { order: 2 }
+        > div:nth-child(4) { order: 3 }
+        > div:nth-child(5) { order: 4 }
+        > div:nth-child(6) { order: 5 }
+        > div:nth-child(7) { order: 6 }
+        > div:nth-child(8) { order: 7 }
+
+        h2 {
+            font-size: clamp(1.5rem, 1.0909rem + 2.0455vw, 2.625rem);
+            font-weight: 300;
+        }
+
+        img {
+            border-radius: 5px 10px 5px 25px;
+        }
+
+    }
+
+    @media screen and ( min-width: 960px ) {
+
+        .uk-grid {
+
+            > div:nth-child(1) { order: 0 }
+            > div:nth-child(2) { order: 1 }
+            > div:nth-child(3) { order: 3 }
+            > div:nth-child(4) { order: 2 }
+            > div:nth-child(5) { order: 4 }
+            > div:nth-child(6) { order: 5 }
+            > div:nth-child(7) { order: 7 }
+            > div:nth-child(8) { order: 6 }
+            
+        }
+
+    }
 
 }
