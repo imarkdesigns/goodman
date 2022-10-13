@@ -6,7 +6,7 @@
     <div class="uk-overlay-primary uk-position-cover"></div>
     <div class="uk-overlay uk-position-bottom uk-light">
         <h1>Management Services</h1>
-        <h2>Goodman kows<br> <span class="uk-text-uppercase">Commercial Property Management</span></h2>
+        <h2>Goodman knows <br> <span class="uk-text-uppercase">Commercial Property Management</span></h2>
         <div class="uk-text-lead uk-width-1-1@m uk-width-1-2@l">Denver Commercial Property Management is Goodman’s specialty. With a primary focus on multi-tenant industrial properties, the Goodman professionals apply over fifty years of experience to all facets of commercial property management.  From NNN reconciliations to the ins-and-outs of zoning uses for specific tenants, Goodman knows Denver commercial property management.</div>
     </div>
 </header>

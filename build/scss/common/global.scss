@@ -20,7 +20,7 @@ body {
 
 body {
     position: relative;
-    font-family: $system;
+    font-family: $face-regular;
     font-size: 1rem;
     color: $base;
     line-height: 1.47059;
@@ -37,7 +37,7 @@ input,textarea,select,button {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: $system;
+    font-family: $face-regular;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #000;
