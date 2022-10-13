@@ -17,7 +17,8 @@
 [class="main"],
 [data-fragment=hero],
 [data-fragment=footer],
-[data-fragment=menu] {
+[data-fragment=menu],
+[data-fragment=localnav] {
     max-width: 1920px;
     margin-inline: auto;
     box-sizing: border-box;
