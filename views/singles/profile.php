@@ -37,7 +37,9 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                 <div class="profile-social | uk-flex-first uk-flex-last@s">
                     <div class="uk-panel">
                         <figure class="uk-position-relative">
-                            <img class="profile-photo" src="<?php echo _uri.'/resources/images/img_profile-mgoodman.jpg' ?>" alt="Mark Goodman">
+                            <?php if ( $profile_image ) {
+                                echo wp_get_attachment_image( $profile_image['ID'], 'full' );
+                            } ?>
                             <div class="uk-overlay uk-position-bottom-right">
                                 <a href="<?php echo $profile_linkedin; ?>" target="_blank"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-linkedin.png'; ?>" alt="View LinkedIn Profile"> </a>
                                 <a href="<?php echo 'mailto:'.$profile_email; ?>" target="_blank"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-mail.png'; ?>" alt="Send Private Message"> </a>
