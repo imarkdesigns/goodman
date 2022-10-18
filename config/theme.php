@@ -24,7 +24,7 @@ add_action('after_setup_theme', function() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'html5', ['caption', 'search-form', 'style', 'script', 'navigation-widgets'] );
     add_theme_support( 'customize-selective-refresh-widgets' );
-    add_theme_support( 'wp-block-styles' );
+    // add_theme_support( 'wp-block-styles' );
     add_theme_support( 'align-wide' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'custom-line-height' );
@@ -37,15 +37,15 @@ add_action('after_setup_theme', function() {
     // add_editor_style( $editor_stylesheet_path );
 
     //* Additional Size
-    // add_image_size( 'cp-thumb', 45, 45, [ 'center', 'center' ] ); // Contact Person Thumbnail
+    add_image_size( 'cp-thumb', 150, 150, [ 'top', 'center' ] ); // Contact Person Thumbnail
     // add_image_size( 'stories-vertical-thumb', 512, 720, [ 'center', 'center' ] ); // Success Stories Thumbnail
     // add_image_size( 'news-vertical-thumb', 390, 550, [ 'center', 'center' ] ); // News Thumbnail
 
     //* Menu
     register_nav_menus([
-        'Main Menu'     => __( 'Menu Navigation', 'acmx-nas' ),
-        // 'Footer Menu'   => __( 'Footer Navigation', 'acmx-nas' ),
-        'Mobile Menu'   => __( 'Mobile Navigation', 'acmx-nas' )
+        'Main Menu'     => __( 'Menu Navigation', 'goodman' ),
+        // 'Footer Menu'   => __( 'Footer Navigation', 'goodman' ),
+        'Mobile Menu'   => __( 'Mobile Navigation', 'goodman' )
     ]);
 
 });
