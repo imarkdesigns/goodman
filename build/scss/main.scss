@@ -1,8 +1,7 @@
 // Import mixins
 @import 'common/mixins';
 
-.for-sale-slider,
-.for-lease-slider {
+.brokerage-slider {
 
     .uk-grid-headings {
         h2 {
@@ -46,7 +45,7 @@
 
         small {
             font-size: .875rem;
-            color: #888;
+            color: rgba(#000,.8);
             @include sharpText();
         }
 
@@ -149,6 +148,7 @@
 
         figure {
             margin: 0;
+            border-radius: 5px;
         }
 
         canvas {
@@ -166,18 +166,19 @@
 
         .uk-overlay-primary {
             background-color: transparent;
-            background: linear-gradient( to top, rgba(#000,.75), rgba(#000,0) );
+            background: linear-gradient( to top, rgba(#000,1), rgba(#000,0) );
         }
 
         .uk-overlay {
             small {
                 display: block;
                 font-size: .875rem;
-                color: #888;
+                color: rgba(#AAA,.9);
             }
 
             h3 {
                 font-size: 1rem;
+                color: rgba(#FFF,.9);
                 text-transform: uppercase;
                 line-height: 1;
                 margin: 15px 0 0;
@@ -255,6 +256,10 @@
 
 }
 
+.gmap {
+    border-bottom: 15px solid $primary-clr;
+}
+
 .router-testimonial {
     position: relative;
 
@@ -270,6 +275,7 @@
         position: relative;
         font-style: normal;
         font-size: 1rem;
+        color: rgba(#FFF,.9);
         z-index: 1;
         @include sharpText();
 
@@ -287,6 +293,7 @@
 
         footer {
             font-size: 1rem;
+            color: rgba(#FFF,.5);
             margin-top: 30px;
 
             &::before {
@@ -301,11 +308,12 @@
 
         span {
             display: inline-block;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             text-transform: uppercase;
             text-align: right;
             line-height: 1;
+            margin-left: 10px;
         }
     }
 
@@ -339,7 +347,7 @@
         font-weight: 400;
         color: #000;
         line-height: 1;
-        margin-bottom: 30px;
+        margin-block: 60px 30px;
     }
 
     h4 {
@@ -348,6 +356,10 @@
         color: #000;
         line-height: 1.8;
         margin: 0;
+
+        + p {
+            margin-top: 0;
+        }
     }
 
     .contact-numbers {

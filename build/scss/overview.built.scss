@@ -61,6 +61,8 @@
             // justify-content: center;
 
             .uk-cover-container img {
+                @include size(auto,150px);
+                object-fit: contain;
                 border-radius: 5px 10px 5px 25px;
             }
 
@@ -86,6 +88,11 @@
                 font-weight: 400;
                 font-size: .75rem;
                 color: rgba($primary-clr,.9);
+            }
+
+            .uk-text-meta,
+            .uk-text-meta .contact-email a {
+                color: rgba(#000,.8);
             }
 
             .uk-text-meta .contact-phone,
@@ -156,6 +163,26 @@
                 font-size: .75rem;
                 font-weight: 300;
             }
+
+            figure.alignnone {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+
+                margin: 30px 0;
+            }
+
+            figure.alignnone > img {
+                border-radius: 5px;
+            }
+
+            figure.alignnone figcaption.wp-caption-text {
+                font-size: .75rem;
+                color: rgba(#000,.75);
+                line-height: 1.4;
+                @include sharpText();
+            }
         }
     }
 
@@ -215,9 +242,25 @@
         }
     }
 
+    @media screen and ( min-width: 512px ) {
+        .profile-details {
+            .uk-article figure.alignnone {
+                flex-direction: row;
+                align-items: flex-end;
+                gap: 30px;
+            }
+        }
+    }
+
     @media screen and ( min-width: 640px ) {
         .profile-details {
             padding-top: 40px;
+
+            .uk-article figure.alignnone {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
         }
         
         .profile-social {
@@ -238,6 +281,12 @@
 
             .uk-article {
                 font-size: 1rem;
+            }
+
+            .uk-article figure.alignnone {
+                flex-direction: row;
+                align-items: flex-end;
+                gap: 30px;
             }
         }
     }
@@ -281,7 +330,7 @@
 
         h3 small {
             display: block;
-            font-weight: 300;
+            font-weight: 400;
             color: $primary-clr;
             text-transform: uppercase;
         }

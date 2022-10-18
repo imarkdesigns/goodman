@@ -11,6 +11,11 @@ $fn_config = [
     'config/assets.php',
     'config/theme.php',
 
+    'config/widgets/property-listings.php',
+    'config/widgets/managed-properties.php',
+    'config/widgets/team.php',
+    'config/widgets/testimonials.php',
+
 ];
 foreach ( $fn_config as $config ) {
     

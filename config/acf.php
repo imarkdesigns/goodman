@@ -5,7 +5,7 @@
 
 //* ACF Hooks
 add_action('acf/init', function() {
-    // acf_update_setting('google_api_key', $_ENV['ACF_GOOGLEMAP']);
+    acf_update_setting('google_api_key', $_ENV['ACF_GOOGLEMAP']);
 });
 
 //* ACF Override UI

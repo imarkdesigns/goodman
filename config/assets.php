@@ -21,6 +21,9 @@ add_action('wp_enqueue_scripts', function() {
     $dirPath = [ 'dirPath' => get_template_directory_uri() ];
     wp_localize_script( 'router', 'directory_uri', $dirPath );
 
+    $gmapKey = [ 'gmapKey' => $_ENV['ACF_GOOGLEMAP'] ];
+    wp_localize_script( 'router', 'google_key', $gmapKey );
+
 
     # Reset PostName
     $postName = '';
@@ -53,7 +56,7 @@ add_action('wp_enqueue_scripts', function() {
                 break;
 
         }
-        if ( is_page([ 9,11,13,15,17,19 ]) ) {
+        if ( is_page([ 9,11,13,15,17,19,23 ]) ) {
             wp_enqueue_style( 'page-main', _css.'main.css' );
             wp_enqueue_style( 'page', _css.$pageName.'.css' );
         } else {
@@ -65,9 +68,10 @@ add_action('wp_enqueue_scripts', function() {
     elseif ( is_singular( 'properties' ) ) {
         wp_enqueue_style( 'page-main', _css.'main.css' );
         wp_enqueue_style( 'post', _css.'overview.built.css' );
+        wp_enqueue_script( 'acf-map', _js.'acf-map.js' );
     }
 
-    elseif ( is_singular( 'team' ) ) {
+    elseif ( is_singular( 'team-list' ) ) {
         wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
 

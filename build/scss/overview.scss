@@ -41,7 +41,8 @@
 
     span.uk-text-meta {
         // font-size: 1rem !important;
-        color: #000 !important;
+        color: $primary-clr !important;
+        text-transform: uppercase;
     }
 
     @media screen and ( min-width: 640px ) {
@@ -69,7 +70,7 @@
     }
 
     .uk-card {
-        h3.uk-card-title {
+        h3 {
             position: relative;
             font-size: 1.5rem;
             font-weight: 300;
@@ -80,6 +81,20 @@
                 width: 100%;
                 padding-top: 30px;
                 border-top: 1px solid #000;
+            }
+        }
+
+        ul {
+            list-style: square;
+            line-height: 1.4;
+            padding-left: 20px;
+
+            li {
+                margin-top: 10px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -182,7 +197,7 @@
             .uk-text-meta {
                 display: block;
                 font-size: .875rem;
-                font-weight: 400;
+                font-weight: 300;
                 letter-spacing: normal;
             }
 
@@ -196,4 +211,103 @@
         }
     }
 
+}
+
+.faq-list {
+
+    h2 {
+        font-size: clamp(1.5rem, 1.3182rem + 0.9091vw, 2rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .uk-accordion {
+
+        li {
+            border-top: 1px solid #CCC;
+            margin-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        .uk-accordion-title {
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            width: 100%;
+            padding-right: 70px;
+            box-sizing: border-box;
+
+            &::before {
+                float: none;
+                position: absolute;
+                right: 0;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='none' stroke='%23000' stroke-width='1.03' points='16 7 10 13 4 7'%3E%3C/polyline%3E%3C/svg%3E");
+            }
+        }
+
+        .uk-open .uk-accordion-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='none' stroke='%23000' stroke-width='1.03' points='4 13 10 7 16 13'%3E%3C/polyline%3E%3C/svg%3E");
+        }
+
+        .uk-accordion-content {
+            font-size: 1rem;
+            color: rgba(#000,.75);
+            width: 100%;
+            padding-right: 70px;
+            padding-bottom: 60px;
+            box-sizing: border-box;
+
+            ul { list-style: square }
+            a { color: rgba($primary-clr,.9); }
+        }
+
+    }
+
+}
+
+//
+// Elfsight Google Map
+//
+
+.eapps-google-maps-marker-content {
+    padding-top: 1rem !important;
+}
+
+.eapps-google-maps-marker-description {
+    b, strong { font-weight: 700 }
+
+    ul {
+        list-style: square;
+        margin-bottom: 0;
+        padding-left: 17px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #DDD;
+    }
+
+    div:nth-last-child(2) {
+        float: right;
+    }
+
+    div:nth-last-child(1),
+    div:nth-last-child(2) {
+        a {
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            outline: none;
+        }
+    }
+}
+
+.eapps-google-maps-bar-list-item-info-item {
+    color: #595959 !important;
+}
+
+.eapps-google-maps-bar-list-item-info-item-category {
+    color: #444 !important;
+}
+
+.eapps-google-maps-bar-search-location {
+    display: none !important;
 }

@@ -249,12 +249,7 @@
     }
 }
 
-[data-fragment="hero"].why-header,
-[data-fragment="hero"].team-header,
-[data-fragment="hero"].services-header,
-[data-fragment="hero"].testimonials-header,
-[data-fragment="hero"].faq-header,
-[data-fragment="hero"].contact-header {
+[data-fragment="hero"].default-header {
 
     h1 {
         @include hideText();
@@ -278,13 +273,15 @@
         letter-spacing: -0.05em;
         margin-bottom: 15px;
 
-        span.uk-text-uppercase {
+        span.uk-text-uppercase,
+        strong {
             font-weight: 700;
             text-transform: uppercase;
         }
     }
 
-    .uk-text-lead {
+    .uk-text-lead,
+    p {
         font-size: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
         font-weight: 300;
         line-height: 1.2;
@@ -344,12 +341,14 @@
     h1 {
         font-size: 3rem;
         font-weight: 700;
+        color: rgba(#FFF,.9);
         margin: 0;
     }
 
     h2 {
         font-size: 1.5rem;
         font-weight: 300;
+        color: rgba(#FFF,.9);
         margin: 0;
     }
 }

@@ -21,9 +21,9 @@ $mobMenu = [
 
 ?>
 <a href="#main" id="skipToLink" class="skip-to-content-link">Skip to Content</a>
-<div data-fragment="menu">
+<div data-fragment="menu" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
     
-    <nav class="uk-navbar-container" uk-navbar uk-sticky="show-on-up: true; animation: uk-animate-slide-top">
+    <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">
             <a href="<?php echo home_url(); ?>" class="uk-navbar-item uk-logo"> <span hidden><?php bloginfo(); ?></span> </a>
         </div>
