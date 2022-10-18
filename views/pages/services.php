@@ -21,7 +21,7 @@
     <section class="services-list-additional | uk-section uk-section-large uk-section-muted">
         <div class="uk-container">
 
-            <div class="uk-grid-large uk-flex-top uk-flex-between" uk-grid uk-margin>
+            <div class="uk-grid-large uk-flex-top uk-flex-between" uk-grid>
             <?php $i = 0;
             while ( have_rows( 'mgmt_expertise' ) ) : the_row(); $i++; ?>
                 <div class="uk-width-1-2@m">
