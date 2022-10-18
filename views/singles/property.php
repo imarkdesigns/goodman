@@ -90,7 +90,7 @@ $property_id = get_the_ID();
                             <div class="uk-card uk-card-small uk-grid-small uk-flex-middle" uk-grid>
                                 <div class="uk-card-media-left uk-cover-container">
                                 <?php if ( has_post_thumbnail() ) {
-                                    echo '<a href="'.get_permalink().'">'. the_post_thumbnail() .'</a>';
+                                    echo '<a href="'.get_permalink().'">'. the_post_thumbnail( [150, 150] ) .'</a>';
                                 } ?>
                                 </div>
                                 <div class="uk-width-expand">
