@@ -23,7 +23,7 @@ $property_id = get_the_ID();
                     <address> <span uk-icon="icon: location"></span> <?php echo $property_info['address']; ?></address>
                     <h1 id="property-heading"><?php echo $property_title; ?></h1>
                     <div class="uk-text-lead">
-                        Sale Price: $ <?php echo $property_info['sale_price']; ?><sup>.00</sup>
+                        Sale Price: $ <?php echo $property_info['sale_price']; ?>
                     </div>
                 </div>
             </div>
