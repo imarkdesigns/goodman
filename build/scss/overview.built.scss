@@ -308,6 +308,12 @@
         position: relative;
         max-width: 390px;
 
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
         .uk-position-bottom-right {
             bottom: 30px;
             display: flex;
