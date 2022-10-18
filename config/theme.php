@@ -37,7 +37,7 @@ add_action('after_setup_theme', function() {
     // add_editor_style( $editor_stylesheet_path );
 
     //* Additional Size
-    add_image_size( 'cp-thumb', 150, 150, [ 'top', 'center' ] ); // Contact Person Thumbnail
+    set_post_thumbnail_size( 300, 300, [ 'top', 'center' ] ); // Contact Person Thumbnail
     // add_image_size( 'stories-vertical-thumb', 512, 720, [ 'center', 'center' ] ); // Success Stories Thumbnail
     // add_image_size( 'news-vertical-thumb', 390, 550, [ 'center', 'center' ] ); // News Thumbnail
 
