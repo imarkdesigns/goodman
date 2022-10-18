@@ -38,7 +38,7 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                     <div class="uk-panel">
                         <figure class="uk-position-relative">
                             <?php if ( $profile_image ) {
-                                echo wp_get_attachment_image( $profile_image['ID'], 'full' );
+                                echo wp_get_attachment_image( $profile_image['ID'], 'full', '', [ 'class' => 'profile-photo' ] );
                             } ?>
                             <div class="uk-overlay uk-position-bottom-right">
                                 <a href="<?php echo $profile_linkedin; ?>" target="_blank"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-linkedin.png'; ?>" alt="View LinkedIn Profile"> </a>
