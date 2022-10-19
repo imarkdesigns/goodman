@@ -54,7 +54,7 @@ $mobMenu = [
                     <li <?php echo ( get_the_ID() == 9 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 9 ); ?>">For Sale</a></li>
                     <li <?php echo ( get_the_ID() == 11 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 11 ); ?>">For Lease</a></li>
                     <li <?php echo ( get_the_ID() == 13 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 13 ); ?>">Past Transactions</a></li>
-                    <li><a href="<?php  ?>">New Property Alerts</a></li>
+                    <li hidden><a href="<?php  ?>">New Property Alerts</a></li>
                     <li <?php echo ( get_the_ID() == 15 ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 15 ); ?>">Managed Properties</a></li>
                 </ul>
             </div>
