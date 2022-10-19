@@ -23,9 +23,10 @@ $property_id = get_the_ID();
                     <address> <span uk-icon="icon: location"></span> <?php echo $property_info['address']; ?></address>
                     <h1 id="property-heading"><?php echo $property_title; ?></h1>
                     <div class="uk-text-lead">
-                        <?php if ( $property_type == 'sale' ) {
+                        <?php 
+                        if ( $property_type['value'] == 'sale' ) {
                             $tag = 'Sale';
-                        } elseif ( $property_type == 'lease' ) {
+                        } elseif ( $property_type['value'] == 'lease' ) {
                             $tag = 'Lease';
                         } ?>
                         <?php echo $tag; ?> Price: $ <?php echo $property_info['sale_price']; ?>
