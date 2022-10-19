@@ -8,7 +8,9 @@ function random_testimonials( $p_count ) {
         'orderby'        => 'rand',
         'meta_key'       => 'featured_testimony',
         'meta_value'     => 1
-    ]); ?>
+    ]); 
+
+    if ( $testimonials ) : ?>
     <section class="router-testimonial | uk-section uk-section-large uk-background-cover" data-src="<?php echo _uri.'/resources/images/bg_router-testimonials.jpg'; ?>" uk-img>
         <div class="uk-container uk-position-relative">
             
@@ -20,7 +22,6 @@ function random_testimonials( $p_count ) {
 
                     $content = get_field( 'content', $post_id );
                     $ciation = get_field( 'citation', $post_id );
-                    $feat    = get_field( 'featured_testimony', $post_id );
                     ?>
                     <blockquote class="uk-width-2xlarge">
                         <p><?php echo strip_tags($content); ?></p>
@@ -39,5 +40,7 @@ function random_testimonials( $p_count ) {
 
         </div>
     </section>
-<?php }
+    <?php 
+    endif;
+}
 add_action( 'random_testimonials', 'random_testimonials', 10, 1 );
