@@ -181,6 +181,22 @@
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
+        @include sharpText();
+
+        > small {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-variant-caps: all-small-caps;
+            text-transform: none;
+            // margin-top: 5px;
+        }
+
+        > small .uk-icon {
+            position: relative;
+            top: -2px;
+            display: none;
+        }
     }
 
     .uk-button {
