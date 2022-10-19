@@ -7,7 +7,6 @@ $property_brochure = get_field( 'property_brochure' );
 $property_photos = get_field( 'property_photos' );
 $property_map = get_field( 'property_map' );
 $property_type = get_field( 'property_type' );
-$property_tag_info = get_field( 'price_description' );
 $property_title = get_the_title();
 $property_id = get_the_ID();
 
@@ -31,7 +30,7 @@ $property_id = get_the_ID();
                             $tag = 'Lease';
                         } ?>
                         <?php echo $tag.' Price: $ '.$property_info['sale_price']; ?>
-                        <small> <span uk-icon="info"></span> <?php echo $property_tag_info; ?> Test </small>
+                        <small> <span uk-icon="info"></span> <?php echo $property_info['price_description']; ?> </small>
                     </div>
                 </div>
             </div>
