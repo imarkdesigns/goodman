@@ -17,6 +17,9 @@
 
         case '3': $pageName = 'legal'; break;
 
+        //
+        case '403': $pageName = '-download'; break;
+
         default:
             $pageName = 'home';
             break;

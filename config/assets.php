@@ -48,6 +48,7 @@ add_action('wp_enqueue_scripts', function() {
             case '2':  // Home
             case '25': // Contact
             case '31': // Sitemap
+            case '403': // Download Brochure
                 $pageName = 'main';
                 break;
 

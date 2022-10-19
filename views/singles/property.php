@@ -13,7 +13,6 @@ $property_id = get_the_ID();
 // echo '<pre>';
 // var_dump($property_contact);
 // echo '</pre>';
-
 ?>
 <header data-fragment="hero" class="property-info | uk-position-relative">
     <div class="uk-container">
@@ -41,7 +40,7 @@ $property_id = get_the_ID();
                     </a>
                     <?php if ( $property_brochure ) : 
                     $url = wp_get_attachment_url( $property_brochure['ID'] ); ?>
-                    <a href="<?php echo esc_html($url); ?>" class="brochure | uk-button uk-button-primary" download> 
+                    <a href="#wpforms-brochure" uk-toggle class="brochure |  uk-button uk-button-primary"> 
                         <span class="uk-text-left"> Download Brochure </span>
                     </a>
                     <?php endif; ?>
@@ -50,6 +49,13 @@ $property_id = get_the_ID();
         </div>
     </div>
 </header>
+
+<div id="wpforms-brochure" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" aria-label="Close Modal" uk-close></button>
+        <?php echo do_shortcode( '[wpforms id="398" title="false"]' ); ?>
+    </div>
+</div>
 
 <main id="main" class="main" role="main">
 
@@ -134,5 +140,5 @@ $property_id = get_the_ID();
     <?php
     do_action( 'property_listings', $property_type['value'], $property_id, true ); ?>
 
-</main> 
+</main>
 <?php get_footer();

@@ -70,3 +70,66 @@
     }
 
 }
+
+
+.wpforms-brochure {
+
+    .wpforms-field-container {
+        input[type=text],
+        input[type=email],
+        input[type=tel] {
+            font-family: $system;
+            height: auto !important;
+            padding: 15px 12px !important;
+            appearance: none !important;
+            box-sizing: border-box;
+            border-radius: 5px !important;
+            transition: background-color 300ms ease-in-out;
+
+            &.wpforms-error {
+                background-color: lighten($primary-clr,65%);
+            }
+        }
+
+        // Select Dropdown
+        .choices__inner {
+            padding: 15px 12px !important;
+            border-radius: 5px !important;
+        }
+
+        label.wpforms-field-label {
+            font-weight: 500 !important;
+            @include sharpText();
+        
+            .wpforms-required-label {
+                color: rgba($primary-clr,.9);
+            }
+        }
+
+        label.wpforms-error {
+            display: none !important;
+        }
+    }
+
+    .wpforms-submit-container {
+        button[type=submit] {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background: $btn-link !important;
+            font-size: .875rem !important;
+            font-weight: 500 !important;
+            color: #FFF !important;
+            text-transform: uppercase;
+            line-height: 1.4;
+            height: 50px;
+            padding-inline: 30px !important;
+            border: 0 !important;
+            border-radius: 5px;
+
+            &:hover {
+                background: darken($btn-link,5%) !important;
+            }
+        }
+    }
+}
