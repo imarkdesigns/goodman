@@ -205,10 +205,26 @@
             &::before { display: none }
         }
 
+        ul {
+            list-style: square;
+            padding-left: 65px;
+
+            li {
+                font-size: 1.063rem;
+                color: #666;
+                line-height: 1.4;
+                margin-top: 10px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
         p {
-            font-size: 1rem;
+            font-size: 1.063rem;
             color: #666;
-            padding-left: 5%;
+            padding-left: 40px;
         }
     }
 
