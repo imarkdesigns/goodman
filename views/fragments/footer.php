@@ -9,17 +9,17 @@
         </div>
         <div>
             <ul class="uk-subnav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Brokerage</a></li>
-                <li><a href="#">Property Management</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo get_permalink( 2 ); ?>">Home</a></li>
+                <li><a href="<?php echo get_permalink( 7 ); ?>">Brokerage</a></li>
+                <li><a href="<?php echo get_permalink( 15 ); ?>">Property Management</a></li>
+                <li><a href="<?php echo get_permalink( 19 ); ?>">Team</a></li>
+                <li><a href="<?php echo get_permalink( 21 ); ?>">Testimonials</a></li>
+                <li><a href="<?php echo get_permalink( 23 ); ?>">FAQ</a></li>
+                <li><a href="<?php echo get_permalink( 25 ); ?>">Contact</a></li>
             </ul>
             <ul class="uk-subnav">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Sitemap</a></li>
+                <li><a href="<?php echo get_permalink( 3 ); ?>">Privacy Policy</a></li>
+                <li><a href="<?php echo get_permalink( 31 ); ?>">Sitemap</a></li>
             </ul>
         </div>
     </div>
