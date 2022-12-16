@@ -37,7 +37,7 @@
                     if ( $img ) {
                         echo wp_get_attachment_image( $img['ID'], 'medium' );
                     } else {
-                        echo '<img src="https://placem.at/places?w=640&h=360&txt=0&random=1'.$i.'" alt="Sample Image '.$i.'">';
+                        echo '<img src="https://picsum.photos/640/360/?random='.$i.'" alt="Sample Image '.$i.'">';
                     } ?>
                     </figure>
                 </div>
