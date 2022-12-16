@@ -21,7 +21,7 @@ query_posts( $teamList );
                                 if ( has_post_thumbnail() ) {
                                     echo the_post_thumbnail( [ 410, 540 ] );
                                 } else {
-                                    echo '<img src="//placem.at/people?w=410&h=540&txt=placeholder&random=4'.get_the_ID().'" alt="'.get_the_title().'">';
+                                    echo '<img src="https://placem.at/people?w=410&h=540&txt=placeholder&random=4'.get_the_ID().'" alt="'.get_the_title().'">';
                                 } ?>
                             </a>
                         </div>
