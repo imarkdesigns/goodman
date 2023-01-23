@@ -46,6 +46,7 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                                 <?php echo !empty($profile_vcard['url']) ? '<a href="'.$profile_vcard['url'].'" download="'.$profile_title.' - VCard"> <img class="profile-icon" src="'._uri.'/resources/images/icon-contact.png" alt="Download VCard"> </a>' : ''; ?>
                             </div>
                         </figure>
+                        <?php if ( $profile_phone ) : ?>
                         <div class="contact-info | uk-text-center">
                             <span class="uk-text-uppercase">Contact Information</span>
                             <ul class="contact-wrapper">
@@ -69,6 +70,7 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                                 <?php endif; ?>
                             </ul>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
