@@ -41,9 +41,9 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                                 echo wp_get_attachment_image( $profile_image['ID'], 'full', '', [ 'class' => 'profile-photo' ] );
                             } ?>
                             <div class="uk-overlay uk-position-bottom-right">
-                                <a href="<?php echo $profile_linkedin; ?>" target="_blank"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-linkedin.png'; ?>" alt="View LinkedIn Profile"> </a>
-                                <a href="<?php echo 'mailto:'.$profile_email; ?>" target="_blank"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-mail.png'; ?>" alt="Send Private Message"> </a>
-                                <a href="<?php echo $profile_vcard['url']; ?>" download="<?php echo $profile_title; ?> - VCard"> <img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-contact.png'; ?>" alt="Download VCard"> </a>
+                                <?php echo !empty($profile_linkedin) ? '<a href="'.$profile_linkedin.'" target="_blank"> <img class="profile-icon" src="'._uri.'/resources/images/icon-linkedin.png" alt="View LinkedIn Profile"> </a>' :; ?>
+                                <?php echo !empty($profile_email) ? '<a href="mailto:'.$profile_email.'" target="_blank"> <img class="profile-icon" src="'._uri.'/resources/images/icon-mail.png" alt="Send Private Message"> </a>' :; ?>
+                                <?php echo !empty($profile_vcard['url']) ? '<a href="'.$profile_vcard['url'].'" download="'.$profile_title.' - VCard"> <img class="profile-icon" src="'._uri.'/resources/images/icon-contact.png" alt="Download VCard"> </a>' :; ?>
                             </div>
                         </figure>
                         <div class="contact-info | uk-text-center">
