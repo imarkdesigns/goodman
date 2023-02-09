@@ -19,7 +19,7 @@
             </ul>
             <ul class="uk-subnav">
                 <li><a href="<?php echo get_permalink( 3 ); ?>">Privacy Policy</a></li>
-                <li><a href="<?php echo get_permalink( 31 ); ?>">Sitemap</a></li>
+                <li hidden><a href="<?php echo get_permalink( 31 ); ?>">Sitemap</a></li>
             </ul>
         </div>
     </div>
