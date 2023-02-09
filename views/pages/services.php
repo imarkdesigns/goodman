@@ -20,6 +20,22 @@
         </div>
     </section>
 
+    <aside class="services-flyer | uk-panel uk-background-secondary">
+    <?php while ( have_rows( 'property_management_flyer' ) ) : the_row();
+        $bgFlyer = get_sub_field( 'pm_flyer_background' );
+        $pdfFlyer = get_sub_field( 'pm_flyer_pdf_file' );
+        ?>
+        <figure class="uk-cover-container uk-height-medium uk-width-expand">
+            <img src="<?php echo $bgFlyer['url']; ?>" alt="Property Management - BG" uk-cover>
+
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-light">
+                <h2><?php the_sub_field( 'pm_flyer_heading' ); ?></h2>
+                <a href="<?php echo $pdfFlyer['url']; ?>" class="uk-link-reset" download> <?php the_sub_field( 'pm_flyer_button_label' ); ?> </a>
+            </div>
+        </figure>
+    <?php endwhile; ?>
+    </aside>
+
     <section class="services-list-additional | uk-section uk-section-large uk-section-muted">
         <div class="uk-container">
 

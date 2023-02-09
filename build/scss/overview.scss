@@ -100,6 +100,20 @@
     }
 }
 
+.services-flyer {
+    position: relative;
+    border: solid $primary-clr;
+    border-width: 5px 0;
+
+    h2 {
+        font-size: clamp(1rem, 0.375rem + 2vw, 1.5rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+}
+
 .services-list-additional {
     &.uk-section-secondary {
         background-color: #000;
