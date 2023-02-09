@@ -35,7 +35,7 @@ $property_id = get_the_ID();
             </div>
             <div class="cta | uk-width-1-3@m">
                 <div class="uk-panel">
-                    <a href="#" class="calendar | uk-button uk-button-primary">
+                    <a hidden href="#" class="calendar | uk-button uk-button-primary">
                         <span class="uk-text-left"> Make Property <br> Viewing Appointment </span>
                     </a>
                     <?php if ( $property_brochure ) : 
