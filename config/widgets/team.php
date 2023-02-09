@@ -25,9 +25,13 @@ function other_team( $p_ID ) {
                     <li role="listitem">
                         <div class="uk-panel">
                             <?php if ( $post_thumbnail ) {
-                                echo '<a href="'.get_permalink( $post_id ).'">'.$post_thumbnail.'</a>';
+                                if ( $post_id != 671 ) {
+                                    echo '<a href="'.get_permalink( $post_id ).'">'.$post_thumbnail.'</a>';
+                                } else {
+                                    echo '<a href="#">'.$post_thumbnail.'</a>';
+                                }
                             } else {
-                                echo '<a href="'.get_permalink( $post_id ).'"><img src="//placem.at/people?w=390&h=460&txt=placeholder&random='.$post_id.'" alt="'.$post_title.'">';
+                                echo '<a href="'.get_permalink( $post_id ).'"><img src="https://placem.at/people?w=390&h=460&txt=placeholder&random='.$post_id.'" alt="'.$post_title.'">';
                             } ?>
                             <div class="uk-position-bottom-right uk-panel">
                                 <h3><?php 

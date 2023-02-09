@@ -12,11 +12,11 @@ query_posts( $teamList );
             <h2>Leadership Team</h2>
             <hr class="uk-divider-small uk-margin-medium-bottom">
             <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
-                <?php while ( have_posts() ) : the_post(); ?>       
+                <?php while ( have_posts() ) : the_post(); ?>
                 <div>
                     <div class="uk-card uk-card-small">
                         <div class="uk-card-media-top uk-margin-bottom">
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="<?php echo ( get_the_ID() != 671 ) ? get_the_permalink() : '#'; ?>">
                                 <?php
                                 if ( has_post_thumbnail() ) {
                                     echo the_post_thumbnail( [ 410, 540 ] );
@@ -26,7 +26,7 @@ query_posts( $teamList );
                             </a>
                         </div>
                         <h3 class="uk-card-title">
-                            <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                            <a href="<?php echo ( get_the_ID() != 671 ) ? get_the_permalink() : '#'; ?>"> <?php the_title(); ?> </a>
                         </h3>
                         <span class="uk-text-meta"><?php the_field( 'profile_designation' ); echo (get_field( 'profile_postnominal' )) ? ', '.get_field( 'profile_postnominal' ) :null; ?></span>
                     </div>
