@@ -15,17 +15,20 @@ foreach ( $properties as $property ) :
     $brochure = get_field( 'property_brochure', $post_id );
 endforeach;
 
-$url = $brochure['url'];
-$path = str_replace( site_url('/'), ABSPATH, esc_url( $url) );
+$url = $brochure;
+$abspath = wp_upload_dir();
 
-if ( $brochure ) {
+$path = $abspath['basedir'] .'/property-brochure/'. $url['filename'];
+
+if ( $path ) {
     header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="'.basename($brochure['filename']).'"');
+    header("Content-type: application/pdf");
+    header('Content-Disposition: attachment; filename="'.$brochure['filename'].'"');
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
-    header('Content-Length: ' . filesize($brochure['filesize']));
+    header('Content-Length: ' . filesize($path));
+    ob_clean();
     flush(); // Flush system output buffer
     readfile($path);
     exit();
