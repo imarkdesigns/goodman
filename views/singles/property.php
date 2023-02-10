@@ -19,7 +19,7 @@ $property_id = get_the_ID();
         <div class="uk-grid-small uk-flex-bottom" uk-grid>
             <div class="uk-width-2-3@m">
                 <div class="uk-panel">
-                    <address> <span uk-icon="icon: location"></span> <?php echo $property_info['address']; ?></address>
+                    <address> <span uk-icon="icon: location"></span> <?php echo $property_info['address']; ?> <?php echo ( !empty($property_info['property_category']) ) ? ' | '.$property_info['property_category'] : ''; ?></address>
                     <h1 id="property-heading"><?php echo $property_title; ?></h1>
                     <div class="uk-text-lead">
                         <?php 
