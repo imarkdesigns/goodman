@@ -61,3 +61,20 @@
     }
 
 }
+
+.wave-webaim {
+
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    font-size: .75rem;
+    text-decoration: none;
+
+    @media screen and ( min-width: 960px ) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: inherit;
+    }
+
+}
