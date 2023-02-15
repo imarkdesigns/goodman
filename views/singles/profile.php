@@ -42,7 +42,7 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                             } ?>
                             <div class="uk-overlay uk-position-bottom-right" <?php echo empty($profile_email) ? 'hidden' : ''; ?>>
                                 <?php echo !empty($profile_linkedin) ? '<a href="'.$profile_linkedin.'" target="_blank"> <img class="profile-icon" src="'._uri.'/resources/images/icon-linkedin.png" alt="View LinkedIn Profile"> </a>' : ''; ?>
-                                <?php echo !empty($profile_email) ? '<a href="mailto:'.$profile_email.'" target="_blank"> <img class="profile-icon" src="'._uri.'/resources/images/icon-mail.png" alt="Send Private Message"> </a>' : ''; ?>
+                                <?php echo !empty($profile_email) ? '<a href="mailto:'.$profile_email.'" target="_top"> <img class="profile-icon" src="'._uri.'/resources/images/icon-mail.png" alt="Send Private Message"> </a>' : ''; ?>
                                 <?php echo !empty($profile_vcard['url']) ? '<a href="'.$profile_vcard['url'].'" download="'.$profile_title.' - VCard"> <img class="profile-icon" src="'._uri.'/resources/images/icon-contact.png" alt="Download VCard"> </a>' : ''; ?>
                             </div>
                         </figure>
