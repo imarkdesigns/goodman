@@ -232,6 +232,35 @@
                 border-radius: 5px 0 0 5px;
                 box-sizing: border-box;
             }
+
+            .popover-email {
+                position: relative;
+                display: inline-flex;
+                @include size(26px);
+            }
+
+            .uk-dropdown {
+                padding: 15px 0;
+                border-radius: 10px 0 10px 10px;
+
+                li > a {
+                    font-size: .875rem;
+                    text-transform: uppercase;
+                    letter-spacing: normal;
+                }
+
+                li {
+                    padding: 0 25px;
+                }
+
+                li:hover {
+                    background-color: rgba($primary-clr,.95);
+
+                    > a {
+                        color: rgba(#FFF,.9);
+                    }
+                }
+            }
         }
 
         .contact-info span {

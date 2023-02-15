@@ -42,7 +42,18 @@ $profile_hdr_bg      = get_field( 'hdr_background' );
                             } ?>
                             <div class="uk-overlay uk-position-bottom-right" <?php echo empty($profile_email) ? 'hidden' : ''; ?>>
                                 <?php echo !empty($profile_linkedin) ? '<a href="'.$profile_linkedin.'" target="_blank"> <img class="profile-icon" src="'._uri.'/resources/images/icon-linkedin.png" alt="View LinkedIn Profile"> </a>' : ''; ?>
-                                <?php echo !empty($profile_email) ? '<a href="mailto:'.$profile_email.'" target="_top"> <img class="profile-icon" src="'._uri.'/resources/images/icon-mail.png" alt="Send Private Message"> </a>' : ''; ?>
+                                <?php // echo !empty($profile_email) ? '<a href="mailto:'.$profile_email.'" target="_top"> <img class="profile-icon" src="'._uri.'/resources/images/icon-mail.png" alt="Send Private Message"> </a>' : ''; ?>
+                                <span class="popover-email">
+                                    <a href="#"><img class="profile-icon" src="<?php echo _uri.'/resources/images/icon-mail.png'; ?>" alt="Send Private Message"></a>
+                                    <div uk-dropdown="mode: click; offset: 25; boundary: !.profile-social; auto-update: false">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php echo $profile_email; ?>" target="_blank">Google Mail</a></li>
+                                            <li><a href="https://compose.mail.yahoo.com/?to=<?php echo $profile_email; ?>" target="_blank">Yahoo Mail</a></li>
+                                            <li><a href="https://outlook.com/owa/?to=<?php echo $profile_email; ?>&path=/mail/action/compose" target="_blank">Outlook Mail</a></li>
+                                            <li><a href="<?php echo 'mailto:'.$profile_email; ?>" target="_top">Other Mail App</a></li>
+                                        </ul>
+                                    </div>
+                                </span>
                                 <?php echo !empty($profile_vcard['url']) ? '<a href="'.$profile_vcard['url'].'" download="'.$profile_title.' - VCard"> <img class="profile-icon" src="'._uri.'/resources/images/icon-contact.png" alt="Download VCard"> </a>' : ''; ?>
                             </div>
                         </figure>
