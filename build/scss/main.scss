@@ -142,9 +142,12 @@
         grid-template-rows: 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 10px;
-        overflow: auto;
+        // overflow: auto;
         width: 100%;
-        -webkit-overflow-scrolling: touch;
+        // -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        overflow-x: scroll;
 
         figure {
             margin: 0;
@@ -162,7 +165,7 @@
         .grid-item-4,
         .grid-item-5,
         .grid-item-6,
-        .grid-item-7 { flex: 1 0 360px }
+        .grid-item-7 { flex: 1 0 360px; }
 
         .uk-overlay-primary {
             background-color: transparent;
