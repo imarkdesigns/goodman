@@ -16,28 +16,35 @@ function managed_properties() {
                         <a href="<?php echo get_permalink( 15 ) ?>">View All Managed Properties</a>
                     </div>
                 </div>
-                <div class="grid-wrapper | uk-light">
-                    <?php $i = 0;
-                    while ( have_rows( 'property_list' ) ) : the_row(); 
-                    $i++; 
+                <div class="uk-position-relative">
+                    <div class="grid-wrapper | uk-light">
+                        <?php $i = 0;
+                        while ( have_rows( 'property_list' ) ) : the_row(); 
+                        $i++; 
 
-                    // Break rows and do not display the last item
-                    if ( $i > 7 ) {
-                        break;
-                    } ?>
-                    <div class="grid-item-<?=$i?>">
-                        <figure class="uk-cover-container">
-                            <?php $featured_image = get_sub_field( 'property_photo' );
-                            echo wp_get_attachment_image( $featured_image['ID'], 'full', '', [ 'uk-cover' => '' ] ); ?>
-                            <canvas></canvas>
-                            <div class="uk-overlay-primary uk-position-cover"></div>
-                            <div class="uk-overlay uk-position-bottom">
-                                <small><?php the_sub_field( 'property_type' ); ?></small>
-                                <h3><?php the_sub_field( 'property_location' ); ?></h3>
-                            </div>
-                        </figure>
+                        // Break rows and do not display the last item
+                        if ( $i > 7 ) {
+                            break;
+                        } ?>
+                        <div class="grid-item-<?=$i?>">
+                            <figure class="uk-cover-container">
+                                <?php $featured_image = get_sub_field( 'property_photo' );
+                                echo wp_get_attachment_image( $featured_image['ID'], 'full', '', [ 'uk-cover' => '' ] ); ?>
+                                <canvas></canvas>
+                                <div class="uk-overlay-primary uk-position-cover"></div>
+                                <div class="uk-overlay uk-position-bottom">
+                                    <small><?php the_sub_field( 'property_type' ); ?></small>
+                                    <h3><?php the_sub_field( 'property_location' ); ?></h3>
+                                </div>
+                            </figure>
+                        </div>
+                        <?php endwhile; ?>
                     </div>
-                    <?php endwhile; ?>
+                    <aside id="swipe-action" class="uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-hidden@s">
+                        <p>To view more photos
+                        <img src="<?php echo _uri.'/resources/images/swipe-alt.png' ?>" alt="Swipe Left or Right">
+                        please swipe left or right. <small>(Tap to Close)</small></p>
+                    </aside>
                 </div>
 
             </div>

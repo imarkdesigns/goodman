@@ -254,6 +254,31 @@
         }
     }
 
+    // Overlay Swipe
+    .uk-overlay-primary {
+        background-color: rgba(#000,.45);
+
+        p {
+            font-size: .75rem;
+            color: rgba(#FFF,.9);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        img {
+            display: block;
+            @include size(32px);
+            margin: 5px auto;
+        }
+
+        small {
+            display: block;
+            letter-spacing: normal;
+            margin-top: 15px;
+        }
+
+    }
+
 }
 
 .gmap {

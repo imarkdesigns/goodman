@@ -7,6 +7,7 @@
     do_action( 'property_listings', 'lease', null, false ); ?>
 
     <?php
-    do_action( 'managed_properties' ); ?>    
+    do_action( 'managed_properties' ); ?>
+
 
 </main>
