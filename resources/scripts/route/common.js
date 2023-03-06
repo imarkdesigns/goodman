@@ -36,15 +36,14 @@
     // Elfsight Search Input Accessibility Fix
     jQuery('.eapps-google-maps-bar-search-inner').prepend('<label for="google-search">Search Property</label>').find('input').attr('id','google-search').attr('placeholder','Search Property');
 
-    document.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-        
-        jQuery('#swipe-action').hide();
-    }, false);
+    // document.addEventListener('touchmove', function(e) {
+    //     e.preventDefault();
+    //     jQuery('#swipe-action').hide();
+    // }, false);
 
-    // jQuery('#swipe-action').on({ 'touchstart' : function() {
-    //     this.hide();
-    // }});
+    jQuery('#swipe-action').on('touchstart click', function() {
+        jQuery('#swipe-action').hide();
+    });
 
 
 })(jQuery);
