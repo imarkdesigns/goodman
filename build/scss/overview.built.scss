@@ -3,7 +3,13 @@
 
 .property-gallery {
     canvas {
+        position: relative;
         min-height: 360px;
+        z-index: -1;
+    }
+
+    iframe {
+        pointer-events: auto;
     }
 
     .uk-slidenav {
@@ -33,6 +39,22 @@
             left: 5px;
         }
     }
+
+    // .video-container {
+    //     position: relative;
+    //     overflow: hidden;
+    //     width: 100%;
+    //     padding-top: 56.25%;
+    //     min-height: 360px;
+    //     max-height: 720px;
+    //     box-sizing: border-box;
+    // }
+
+    // .video-responsive-iframe {
+    //     position: absolute;
+    //     inset: 0;
+    //     @include size(100%);
+    // }
 }
 
 .property-details {

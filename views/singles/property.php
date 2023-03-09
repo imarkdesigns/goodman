@@ -5,6 +5,7 @@ $property_details = get_field( 'property_description' );
 $property_contact = get_field( 'property_contact_persons' );
 $property_brochure = get_field( 'property_brochure' );
 $property_photos = get_field( 'property_photos' );
+$property_video = get_field( 'property_yt_url' );
 $property_map = get_field( 'property_map' );
 $property_type = get_field( 'property_type' );
 $property_title = get_the_title();
@@ -62,7 +63,25 @@ $property_id = get_the_ID();
     <section class="property-gallery | uk-section uk-padding-remove" aria-labelledby="property-heading">
         <div class="uk-position-relative" tabindex="-1" uk-slider="center: true">
             <ul class="uk-slider-items uk-grid-small uk-grid" role="list">
-                <?php foreach( $property_photos as $photo ): ?>
+                <?php if ( $property_video ) : 
+
+                $video_part = explode( '?v=', $property_video );
+                if ( preg_match("/youtu.be/i", $property_video) ) {
+                    $video_part = explode( '/', $property_video );
+                    $video_id = $video_part[3];
+                } else {
+                    $video_part = explode( '?v=', $property_video );
+                    $video_id = $video_part[1];
+                } ?>
+                <li class="uk-width-3-4" role="listitem">
+                    <div class="uk-cover-container">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/<?=$video_id;?>?autoplay=0&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;loop=0&amp;modestbranding=1&amp;wmode=transparent" title="<?php echo $property_title; ?>" uk-cover frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <canvas width="1280" height="720"></canvas>
+                    </div>
+                </li>
+                <?php endif;
+
+                foreach( $property_photos as $photo ) : ?>
                 <li class="uk-width-3-4" role="listitem">
                     <div class="uk-cover-container">
                         <?php echo wp_get_attachment_image( $photo['ID'], 'full', '', [ 'uk-cover' => '' ] ); ?>
