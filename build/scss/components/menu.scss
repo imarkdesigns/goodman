@@ -196,7 +196,16 @@
     .uk-subnav {
         flex-wrap: nowrap;
         justify-content: flex-start;
+        gap: 10px;
+        height: 50px;
         margin: 0;
+
+        > li {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+        }
 
         > li > a {
             font-size: .75rem;
@@ -208,9 +217,14 @@
             color: rgba(#FFF,.75);
         }
 
+        > .uk-active {
+            background-color: $primary-clr;
+        }
+
         > .uk-active > a {
             font-weight: 600;
             color: rgba(#FFF,.9);
+            letter-spacing: normal;
         }        
     }
 
