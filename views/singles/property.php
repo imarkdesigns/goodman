@@ -41,7 +41,7 @@ $property_id = get_the_ID();
                     </a>
                     <?php if ( $property_brochure ) : 
                     $url = wp_get_attachment_url( $property_brochure['ID'] ); ?>
-                    <a href="#wpforms-brochure" uk-toggle class="brochure |  uk-button uk-button-primary"> 
+                    <a href="#gforms-brochure" uk-toggle class="brochure |  uk-button uk-button-primary"> 
                         <span class="uk-text-left"> Download Brochure </span>
                     </a>
                     <?php endif; ?>
@@ -51,10 +51,11 @@ $property_id = get_the_ID();
     </div>
 </header>
 
-<div id="wpforms-brochure" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
+<div id="gforms-brochure" uk-modal="bg-close: false; esc-close: false">
+    <div class="uk-modal-dialog uk-modal-body uk-position-relative">
         <button class="uk-modal-close-default" type="button" aria-label="Close Modal" uk-close></button>
-        <?php echo do_shortcode( '[wpforms id="398" title="false"]' ); ?>
+        <?php # echo do_shortcode( '[wpforms id="398" title="false"]' ); 
+        gravity_form( 3, false, false, false, '', true ); ?>
     </div>
 </div>
 

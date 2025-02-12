@@ -198,3 +198,6 @@ function my_prefix_customize_app_password_availability( $available, $user) {
 }
 add_filter('wp_is_application_passwords_available_for_user', 'my_prefix_customize_app_password_availability', 10, 2);
 add_filter( 'wp_is_application_passwords_available', '__return_false' ); // set __return_true to activate back
+
+// Activate GravityForms CC
+add_filter( 'gform_notification_enable_cc', '__return_true' );

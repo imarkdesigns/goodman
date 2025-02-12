@@ -27,6 +27,15 @@
                 var _title = jQuery.trim(_title);
                 jQuery(this).find('.eapps-google-maps-bar-list-item-additional-picture img').attr('alt', _title);
             });
+
+            // Force form to open in new tab
+            jQuery('#wpforms-form-398').attr('target', '_blank');
+
+            // Force refresh the property page
+            jQuery('#gforms-brochure button.uk-modal-close-default').on('click', function(e) {
+                e.preventDefault();
+                location.reload(true); 
+            });
         }    
     }, 100);
 

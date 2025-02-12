@@ -31,8 +31,9 @@ if ( $path ) {
     ob_clean();
     flush(); // Flush system output buffer
     readfile($path);
-    exit();
+    exit;
 } else {
     http_response_code(404);
     exit;
 }
+

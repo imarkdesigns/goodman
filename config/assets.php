@@ -49,6 +49,8 @@ add_action('wp_enqueue_scripts', function() {
             case '25': // Contact
             case '31': // Sitemap
             case '403': // Download Brochure
+            case '1301': // Property Alerts
+            case '1499': // New Homepage
                 $pageName = 'main';
                 break;
 
@@ -75,5 +77,9 @@ add_action('wp_enqueue_scripts', function() {
     elseif ( is_singular( 'team-list' ) ) {
         wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
+
+    // elseif ( is_front_page() ) {
+    //     wp_enqueue_script( 'count-up-js', _js.'counterup.min.js' );
+    // }
 
 }, 100);

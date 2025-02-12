@@ -11,7 +11,8 @@
                 </div>
                 <div class="uk-width-1-2@m">
                     <div class="uk-panel uk-background-secondary uk-padding">
-                        <?php echo do_shortcode( '[wpforms id="94" title="false"]' ); ?>
+                        <?php # echo do_shortcode( '[wpforms id="94" title="false"]' );
+                        gravity_form( 2, false, false, false, '', true ); ?>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,8 @@ var theme = {
         }
     },
 
-    home: {
-        finalize: () => {
+    new_homepage: {
+        init: () => {
             jQuery.getScript( script + 'home.js' );
         }
     },

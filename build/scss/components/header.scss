@@ -1,3 +1,58 @@
+.featured-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+
+    .uk-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-clr;
+        font-size: 1.125rem;
+        color: #FFF;
+        text-indent: -999px;
+        line-height: normal;
+        margin: 0;
+        opacity: .5;
+        overflow: hidden;
+        transition: opacity 300ms ease;
+        @include size(40px);
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    img {
+        max-width: 860px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    @media screen and ( min-width: 860px ) {
+        img {
+            max-width: 100%;
+            height: 120px;
+        }
+    }
+
+    @media screen and ( min-width: 1200px ) {
+        img {
+            height: 160px;
+        }
+    }
+
+}
+
+
 [data-fragment="hero"].home {
 
     .uk-light * {
@@ -300,7 +355,7 @@
 
     .uk-cover-container {
         canvas {
-            min-height: 640px;
+            min-height: 480px;
         }
     }
 

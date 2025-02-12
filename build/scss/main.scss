@@ -360,7 +360,8 @@
 
 }
 
-.contact-form {
+.contact-form,
+.mailing-list-form {
 
     h2 {
         font-size: clamp(1.5rem, 0.8636rem + 3.1818vw, 3.25rem);
@@ -402,13 +403,18 @@
         margin: 0;
     }
 
-    .uk-background-secondary {
+    .uk-background-secondary,
+    .uk-background-muted, {
         background-color: #000;
         border-radius: 5px 10px 5px 25px;
 
         .uk-text-right {
             font-size: .75rem !important;
         }
+    }
+
+    .uk-background-muted {
+        background-color: #F5F5F5;
     }
 
 }

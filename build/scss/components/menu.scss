@@ -42,6 +42,28 @@
         > li.current-menu-item a {
             color: rgba($primary-clr,.9);
         }
+
+        > li.gforms {
+            display: flex;
+            align-items: center;
+            height: 80px;
+
+            > a {
+                display: block;
+                background: $primary-clr;
+                font-weight: 500;
+                color: #FFF;
+                min-height: auto;
+                padding: .5em;
+                border-radius: 3px;
+            }
+
+            > a:hover,
+            > a:focus {
+                background: darken($primary-clr,5%);
+                text-shadow: 0 1px 1px rgba(#111,.35);
+            }
+        }
     }
 
     .uk-navbar-dropdown {
