@@ -5,17 +5,25 @@
 
             <h2>Property Management Services</h2>
 
-            <div class="uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid uk-height-match="target: div > .uk-card > p">
-            <?php while ( have_rows( 'mgmt_services' ) ) : the_row(); ?>
-                <div>                    
-                    <div class="uk-card">
-                        <?php the_sub_field( 'services' ); ?>
+            <div class="uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid uk-height-match="target: div > .uk-card > .uk-card-body">
+                <?php $services = get_field( 'mgmt_services' );
+                foreach ( $services as $service ) : ?>
+                    <div>
+                        <div class="uk-card uk-card-small">
+                            <div class="uk-card-body">
+                                <?php echo $service['services']; ?>
+                            </div>                        
+                            <div class="uk-card-footer">
+                                <?php if ( $service['cc_selection'] == 'link' && ! empty($service['button_link']) ) :                    
+                                    echo '<a href="'.$service['button_link']['url'].'" class="uk-button uk-button-primary">'.$service['button_link']['title'].'</a>';
+                                elseif ( $service['cc_selection'] == 'download' && ! empty($service['button_download_file']) ) :
+                                    echo '<a download target="_blank" href="'.$service['button_download_file']['url'].'" class="uk-button uk-button-primary" download>'.$service['button_download_file']['caption'].'</a>';
+                                endif; ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            <?php endwhile; ?>
+                <?php endforeach; ?>
             </div>
-
-            <a href="<?php echo get_permalink( 15 ); ?>" class="uk-button uk-button-primary">Managed Property Locations</a>
 
         </div>
     </section>
