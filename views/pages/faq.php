@@ -10,14 +10,7 @@
                 <div class="uk-width-3-4@m">
                     
                     <ul uk-accordion>
-                    <?php while ( have_rows( 'faq_list' ) ) : the_row(); ?>
-                        <li>
-                            <a href="#" class="uk-accordion-title"> <?php the_sub_field( 'faq_title' ); ?> </a>
-                            <div class="uk-accordion-content">
-                                <p><?php the_sub_field( 'faq_content' ); ?></p>
-                            </div>
-                        </li>
-                    <?php endwhile; ?>
+                        <?php do_action( 'faq_list' ); ?>
                     </ul>
 
                 </div>

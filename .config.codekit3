@@ -287,6 +287,14 @@
       "oAP" : "\/config\/theme.php",
       "oF" : 0
     },
+    "\/config\/widgets\/faqs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/widgets\/faqs.php",
+      "oF" : 0
+    },
     "\/config\/widgets\/managed-properties.php" : {
       "cB" : 0,
       "ft" : 8192,

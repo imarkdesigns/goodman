@@ -16,6 +16,7 @@ $fn_config = [
     'config/widgets/team.php',
     'config/widgets/testimonials.php',
     'config/widgets/wide-banner.php',
+    'config/widgets/faqs.php',
 
 ];
 foreach ( $fn_config as $config ) {

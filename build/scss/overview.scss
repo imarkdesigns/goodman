@@ -276,13 +276,13 @@
 
     .uk-accordion {
 
-        li {
+        > li {
             border-top: 1px solid #CCC;
             margin-bottom: 30px;
             padding-top: 30px;
         }
 
-        .uk-accordion-title {
+        > .uk-accordion-title {
             position: relative;
             font-size: 1.5rem;
             line-height: 1.2;
