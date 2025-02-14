@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class() . schema() ?>>
 <?php
-    do_action( 'wBanner', get_the_ID(), true );
+    // do_action( 'wBanner', get_the_ID(), true );
 
     get_template_part( _nav );
     get_template_part( _hdr );
