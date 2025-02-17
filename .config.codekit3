@@ -1144,20 +1144,20 @@
       "oAP" : "\/views\/pages\/for-sale.php",
       "oF" : 0
     },
+    "\/views\/pages\/home-back.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/pages\/home-back.php",
+      "oF" : 0
+    },
     "\/views\/pages\/home.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/pages\/home.php",
-      "oF" : 0
-    },
-    "\/views\/pages\/homepage.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/homepage.php",
       "oF" : 0
     },
     "\/views\/pages\/legal.php" : {
