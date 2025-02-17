@@ -434,6 +434,51 @@
             border-radius: 5px 15px 5px 50px;
         }
     }
+}
+
+.case-study-info {
+
+    h1 {
+        font-size: clamp(2rem, 1.5536rem + 1.4286vw, 2.625rem);
+        font-weight: 400;
+        text-transform: uppercase;
+        @include sharpText;
+    }
+
+    img.uk-border-rounded {
+        border-radius: 5px 15px 5px 25px;
+        border: 1.5px solid rgba(#FFF,.75);
+        transition: all 300ms ease-in-out;
+    }
+
+    @media ( min-width: 640px ) {
+        img.uk-border-rounded {
+            border-radius: 10px 25px 10px 50px;
+        }
+    }
+
+}
+
+.case-study-post {
+
+    .uk-article {
+        font-size: 1.125rem;
+        @include sharpText;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: clamp(1.5rem, 1.1429rem + 1.1429vw, 2rem);
+        color: $primary-clr;
+        margin-top: 0;
+
+        &#challenges,
+        &#strategy-and-execution,
+        &#results,
+        &#conclusion {
+            margin-top: 60px;
+        }
+    }
 
 
 }

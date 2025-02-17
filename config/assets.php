@@ -75,7 +75,8 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_script( 'acf-map', _js.'acf-map.js' );
     }
 
-    elseif ( is_singular( 'team-list' ) ) {
+    elseif ( is_singular( 'team-list' ) || is_singular( 'case-studies' ) ) {
+        wp_enqueue_style( 'page-main', _css.'main.css' );
         wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
 
