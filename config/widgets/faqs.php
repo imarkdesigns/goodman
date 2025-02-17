@@ -9,13 +9,15 @@ function faq_list() {
         'orderby'        => 'menu_order',
     ]);
 
+    // var_dump($faqs);
+
     if ( $faqs ) :
 
         foreach ( $faqs as $faq ) : 
         
         $postID = $faq->ID;
         $post_title = $faq->post_title;
-        $post_content = get_field( 'faq_content', $postID ); 
+        $post_content = $faq->post_content;
         $post_toggle = get_field( 'toggle_faq', $postID ); 
 
         // var_dump($faq);

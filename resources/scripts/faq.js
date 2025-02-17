@@ -1,0 +1,1 @@
+!function($){var e=setInterval((function(){"complete"===document.readyState&&(clearInterval(e),jQuery("figure.uk-table-wrapper").find("table").addClass("uk-table uk-table-divider"))}),100)}(jQuery);

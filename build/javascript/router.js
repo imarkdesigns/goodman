@@ -15,6 +15,12 @@ var theme = {
         }
     },
 
+    faq: {
+        init: () => {
+            jQuery.getScript( script + 'faq.js' );
+        }
+    },
+
 }
 
 var UTIL = {
