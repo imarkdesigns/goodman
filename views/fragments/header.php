@@ -46,7 +46,7 @@ $hdr_sscreen = get_field( 'hdr_split_screen' ); ?>
         </div>
     </header>
 
-<?php elseif ( is_page([ 7,17,19,21,23,25,1301, 1528 ]) ) :
+<?php elseif ( is_page([ 7,17,19,21,23,25,1301, 1532 ]) ) :
 
 $hdr_type  = get_field( 'hdr_type' );
 $hdr_group = get_field( 'hdr_background' );
