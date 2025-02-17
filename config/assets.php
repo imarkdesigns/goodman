@@ -51,7 +51,7 @@ add_action('wp_enqueue_scripts', function() {
             case '403': // Download Brochure
             case '1301': // Property Alerts
             case '1499': // New Homepage
-            case '1528': // Case Studies
+            case '1532': // Case Studies
                     $pageName = 'main';
                 break;
 

@@ -21,7 +21,7 @@
         case '1301': $pageName = '-alerts'; break;
 
         case '1499': $pageName = 'homepage'; break;
-        case '1528': $pageName = 'case'; break;
+        case '1532': $pageName = 'case'; break;
 
         default:
             $pageName = 'home';
