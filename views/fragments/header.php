@@ -46,15 +46,11 @@ $hdr_sscreen = get_field( 'hdr_split_screen' ); ?>
         </div>
     </header>
 
-<?php elseif ( is_page([ 7,17,19,21,23,25,1301 ]) ) :
+<?php elseif ( is_page([ 7,17,19,21,23,25,1301, 1528 ]) ) :
 
 $hdr_type  = get_field( 'hdr_type' );
 $hdr_group = get_field( 'hdr_background' );
 $hdr_title = get_the_title();
-
-// echo '<pre>';
-// var_dump($hdr_group);
-// echo '</pre>';
 
 if ( $hdr_group && $hdr_type == 'hdr' ) : ?>
 <header data-fragment="hero" class="default-header | uk-position-relative">

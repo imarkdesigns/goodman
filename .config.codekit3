@@ -287,6 +287,14 @@
       "oAP" : "\/config\/theme.php",
       "oF" : 0
     },
+    "\/config\/widgets\/case-studies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/widgets\/case-studies.php",
+      "oF" : 0
+    },
     "\/config\/widgets\/faqs.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1112,6 +1120,14 @@
       "oAP" : "\/views\/pages\/-download.php",
       "oF" : 0
     },
+    "\/views\/pages\/case.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/pages\/case.php",
+      "oF" : 0
+    },
     "\/views\/pages\/contact.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1222,6 +1238,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/pages\/why-goodman.php",
+      "oF" : 0
+    },
+    "\/views\/singles\/case.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/singles\/case.php",
       "oF" : 0
     },
     "\/views\/singles\/profile.php" : {

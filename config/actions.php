@@ -162,12 +162,13 @@ function fetchPostViews($postID) {
 function custom_field_excerpt( $content, $length ) {
   global $post;
   $text = $content; //Replace 'your_field_name'
-  if ( '' != $text ) {
+  if ( ! empty( $text ) ) {
     $text = strip_shortcodes( $text );
     $text = apply_filters('the_content', $text);
     $text = str_replace(']]&gt;', ']]&gt;', $text);
+    $text = str_replace('Background', '', $text);
     $excerpt_length = $length;
-    $excerpt_more = apply_filters('excerpt_more', '' . '...');
+    $excerpt_more = apply_filters('excerpt_more', '' . '..');
     $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
   }
   return apply_filters('the_excerpt', $text);

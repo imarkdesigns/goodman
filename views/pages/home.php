@@ -20,15 +20,19 @@
                     <h2>Total Dollar <br> Transactions</h2>
                     <h3>$ 12,951,324</h3>
                 </div>
+                <div class="uk-width-auto">
+                    <h2>New Column <br> Transactions</h2>
+                    <h3>$ 1,151,324</h3>
+                </div>
             </div>
 
         </div>
     </section>
 
     <section class="homepage-modules | uk-section uk-padding-remove-top">
-        <div class="uk-container uk-container-large">
+        <div class="uk-container uk-container-large uk-overflow-hidden">
 
-            <div class="slider-wrapper">
+            <div class="slider-wrapper" uk-slider>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
                     <div class="uk-slider-items uk-grid-small" uk-grid>
@@ -44,7 +48,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sunt iste laudantium aspernatur explicabo error ab ipsa maiores voluptatum qui? <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="<?php echo get_permalink( 15 ); ?>" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -55,12 +59,12 @@
                                     <canvas width="100%" height="550"></canvas>
 
                                     <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-middle">
-                                        <h2>Assets Management</h2>
+                                        <h2>Asset Management</h2>
                                     </div>
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi voluptate optio dolores blanditiis consectetur. <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="#asset-management" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -76,7 +80,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi voluptate optio dolores blanditiis consectetur. <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="<?php echo get_permalink( 9 ); ?>" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -92,7 +96,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Hic, id optio dignissimos amet officiis magni alias error quos! <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="<?php echo get_permalink( 11 ); ?>" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -108,7 +112,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fugiat. <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="<?php echo get_permalink( 23 ); ?>" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -124,7 +128,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Repellendus, quaerat. <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="<?php echo get_permalink( 2 ); ?>" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
@@ -140,7 +144,7 @@
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-width-xlarge">
                                         <p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Repellendus, quaerat. <span uk-icon="arrow-right"></span></p>
                                     </div>
-                                    <a href="#1" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
+                                    <a href="#news-and-insights" class="uk-position-cover" aria-label="Learn more about Lorem ipsum dolor sit amet."></a>
                                 </figure>
                             </div>
                         </div>
