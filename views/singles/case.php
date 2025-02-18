@@ -1,9 +1,16 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+$toggle_address = get_field( 'toggle_address' );
+$address = get_field( 'property_full_address' );
+
+?>
 
 <header data-fragment="hero" class="case-study-info | uk-position-relative uk-background-muted">
     <div class="uk-container uk-container-small uk-padding-large uk-text-center">
-        <address> 1707-1761 E 68th Ave, Denver, CO 80229 </address>
-        <hr class="uk-divider-small">
+        <?php if ( $toggle_address && ! empty( $address ) ) : ?>
+            <address> <?php echo $address; ?> </address>
+            <hr class="uk-divider-small">
+        <?php endif; ?>
         <h1><?php the_title(); ?></h1>
         <figure class="uk-margin-top">
             <?php if ( has_post_thumbnail() ) {
