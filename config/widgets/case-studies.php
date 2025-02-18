@@ -15,8 +15,7 @@ function case_list() {
         foreach ( $cases as $case ) :
 
         $post_ID = $case->ID;
-        $post_title = $case->post_title;
-        $post_content = $case->post_content; ?>
+        $post_title = $case->post_title; ?>
             <div>
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                     <div class="uk-card-media-left uk-padding uk-flex uk-flex-center">
@@ -25,8 +24,8 @@ function case_list() {
                     <div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title"><?php echo $post_title; ?></h3>
-                            <p><strong>Background:</strong></p>
-                            <p><?php echo custom_field_excerpt( $post_content, '40' ); ?></p>
+                            <p><strong>Introduction:</strong></p>
+                            <p><?php echo get_field( 'acc_background' ); ?></p>
                             <p><a href="<?php echo get_permalink( $post_ID ); ?>">Read More <span uk-icon="icon: chevron-double-right"></span></a></p>
                         </div>
                     </div>
