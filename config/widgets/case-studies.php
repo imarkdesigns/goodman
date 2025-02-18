@@ -25,7 +25,7 @@ function case_list() {
                         <div class="uk-card-body">
                             <h3 class="uk-card-title"><?php echo $post_title; ?></h3>
                             <p><strong>Introduction:</strong></p>
-                            <p><?php echo get_field( 'acc_background' ); ?></p>
+                            <p><?php echo get_field( 'acc_background', $post_ID ); ?></p>
                             <p><a href="<?php echo get_permalink( $post_ID ); ?>">Read More <span uk-icon="icon: chevron-double-right"></span></a></p>
                         </div>
                     </div>
