@@ -15,14 +15,15 @@ function case_list() {
         foreach ( $cases as $case ) :
 
         $post_ID = $case->ID;
-        $post_title = $case->post_title; ?>
+        $post_title = $case->post_title;
+        $img_ID = get_post_thumbnail_id($post_ID); ?>
             <div>
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                     <div class="uk-card-media-left uk-padding uk-flex uk-flex-center">
-                        <?php if ( has_post_thumbnail() ) {
-                            echo wp_get_attachment_image( get_post_thumbnail_id( $post_ID ), [ 640, 360, true ] );
-                        } 
-                        /* <img src="https://placehold.co/640x360?text=Photo+Placeholder" alt=""> */ ?>
+                        <?php 
+                            echo wp_get_attachment_image( $img_ID, [ 640, 360, true ] );
+                            /* <img src="https://placehold.co/640x360?text=Photo+Placeholder" alt=""> */ 
+                        ?>
                     </div>
                     <div>
                         <div class="uk-card-body">
