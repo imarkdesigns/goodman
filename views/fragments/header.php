@@ -1,10 +1,21 @@
-<?php if ( is_front_page() ) : ?>
+<?php if ( is_front_page() ) : 
+
+$headline = get_field( 'hdr_split_headline' );
+$subheadline = get_field( 'hdr_split_subheadline' );
+$background = get_field( 'background_header' );
+$split_hdr = get_field( 'split_headings' ); 
+
+?>
 
     <header data-fragment="hero" class="home | uk-position-relative">
         <div class="uk-cover-container" uk-height-viewport="offset-top: true; offset-bottom: 255px; min-height: 667px">
             <!-- offset-bottom: 255; min-height: 667 -->
             <video muted autoplay loop playsinline class="video-bg | uk-position-absolute uk-transform-center" uk-cover>
-                <source src="<?php echo _uri.'/resources/video/denver-intro-video.mp4'; ?>" type="video/mp4">
+                <?php if ( ! empty($background) ) : ?>
+                    <source src="<?php echo $background['url']; ?>" type="video/mp4">
+                <?php else : ?>
+                    <source src="<?php echo _uri.'/resources/video/denver-intro-video.mp4'; ?>" type="video/mp4">
+                <?php endif; ?>
             </video>
 
             <div class="uk-container uk-container-large uk-position-relative" uk-height-viewport="offset-top: true; offset-bottom: 255px">
@@ -12,29 +23,27 @@
                 <div class="uk-width-expand uk-child-width-1-2@s uk-flex-between uk-light" uk-grid uk-height-match="target: > div > .uk-card > .uk-card-body">
                     <div class="uk-width-1-1 uk-height-medium uk-flex uk-flex-center uk-flex-middle">
                         <h1 class="uk-text-uppercase uk-text-center">
-                            <span>Goodman Knows Denver</span>
-                            <span class="uk-display-block uk-text-small">Commercial Real Estate</span>
+                            <span><?php echo $headline; ?></span>
+                            <span class="uk-display-block uk-text-small"><?php echo $subheadline; ?></span>
                         </h1>
                     </div>
                     <div>
                         <div class="uk-card">
                             <div class="uk-card-body uk-width-xlarge">
-                                <h2>Property Management</h2>
-                                <p>Goodman specializes in commercial real estate property management with locations throughout the greater Denver area.</p>
+                                <?php echo $split_hdr['left_content']; ?>
                             </div>
                             <div class="uk-card-footer">
-                                <a href="#" class="uk-button uk-button-default">Learn More</a>
+                                <a href="<?php echo $split_hdr['left_content_link']; ?>" class="uk-button uk-button-default" aria-label="Learn More About Property Management">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="uk-card">
                             <div class="uk-card-body uk-width-xlarge">
-                                <h2>Brokerage</h2>
-                                <p>Denver commercial real estate properties including warehouse, office and industrial are available for lease & sale now in prime Denver locations.</p>
+                                <?php echo $split_hdr['right_content']; ?>
                             </div>
                             <div class="uk-card-footer">
-                                <a href="#" class="uk-button uk-button-default">Learn More</a>
+                                <a href="<?php echo $split_hdr['right_content_link']; ?>" class="uk-button uk-button-default" aria-label="Learn More About Brokerage">Learn More</a>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,7 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_style( 'fragments', _css.'fragments.css' );
     wp_enqueue_script( 'router', _js.'router.js', ['jquery'], null, true );
+    wp_enqueue_script( 'counter-up', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js', null, null, true );
         
     # Localize Scripts
     $dirPath = [ 'dirPath' => get_template_directory_uri() ];

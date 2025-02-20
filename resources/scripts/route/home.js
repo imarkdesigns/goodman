@@ -18,7 +18,6 @@
             }).resize();
 
             // Counter Up
-            jQuery.getScript('https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js');
             jQuery.getScript('https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js', function() {
                 jQuery('span.counter').counterUp({
                     delay: 50,
