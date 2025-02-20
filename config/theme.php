@@ -57,5 +57,5 @@ if ( ! isset( $content_width ) ) {
 
 // Add overrides to ACF Custom Fields
 add_action( 'admin_enqueue_scripts', function() {
-    wp_enqueue_script( 'handle', _uri . '/build/editor/wp-acf-script.js' );
+    // wp_enqueue_script( 'handle', _uri . '/build/editor/wp-acf-script.js' );
 } );
