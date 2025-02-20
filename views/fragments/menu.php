@@ -27,10 +27,10 @@ $mobMenu = [
         <div class="uk-navbar-left">
             <a href="<?php echo home_url(); ?>" class="uk-navbar-item uk-logo"> <span hidden><?php bloginfo(); ?></span> </a>
         </div>
-        <div class="uk-navbar-right uk-visible@m">
+        <div class="uk-navbar-right uk-visible@l">
             <?php wp_nav_menu( $navMenu ); ?>
         </div>
-        <div class="uk-navbar-right uk-hidden@m">
+        <div class="uk-navbar-right uk-hidden@l">
             <button type="button" class="mobile-menu | uk-navbar-toggle" aria-label="Sidebar Menu" uk-toggle>
                 <span>menu</span>
                 <span uk-navbar-toggle-icon></span>

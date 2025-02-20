@@ -9,7 +9,13 @@
                 </div>
                 <div class="uk-width-3-4@m">
                     
-                    <ul uk-accordion>
+                    <form class="uk-search uk-search-default uk-width-expand">
+                        <span uk-search-icon></span>
+                        <input type="search" id="faqsInput" class="uk-search-input" placeholder="Start typing your question here to search FAQs" aria-label="Search">
+                    </form>
+                    <div class="faqs-result | uk-text-muted uk-margin-small-top" tabindex="0"></div>
+
+                    <ul id="faqs-list-wrapper" uk-accordion>
                         <?php do_action( 'faq_list' ); ?>
                     </ul>
 

@@ -1,28 +1,39 @@
 <main id="main" class="main" role="main">
 
-    <section class="counter-wrapper | uk-section">
-        <div class="uk-container uk-container-large | counter" uk-overflow-auto>
+    <section class="counter-up | uk-section">
+        <div class="uk-container uk-container-large">
 
-            <div class="counter-list">
-                <div class="uk-width-auto">
-                    <h2>Square Footage <br> Sold</h2>
-                    <h3>1,951</h3>
-                </div>
-                <div class="uk-width-auto">
-                    <h2>Square Footage <br> Leased</h2>
-                    <h3>131,906</h3>
-                </div>
-                <div class="uk-width-auto">
-                    <h2>Square Footage <br> Managed</h2>
-                    <h3>856,936</h3>
-                </div>
-                <div class="uk-width-auto">
-                    <h2>Total Dollar <br> Transactions</h2>
-                    <h3>$ 12,951,324</h3>
-                </div>
-                <div class="uk-width-auto">
-                    <h2>New Column <br> Transactions</h2>
-                    <h3>$ 1,151,324</h3>
+            <div id="counter-wrapper" class="counter-wrapper | uk-position-relative" tabindex="0" role="region" aria-label="scrollable region">
+                <ul id="counter-list" class="counter-list">
+                    <li class="counter-item">
+                        <h2>Total Dollar <br> Transactions</h2>
+                        <h3>$ <span class="counter">12,951,324</span></h3>
+                    </li>
+                    <li class="counter-item">
+                        <h2>Square Footage <br> Leased</h2>
+                        <h3><span class="counter">131,906</span></h3>
+                    </li>
+                    <li class="counter-item">
+                        <h2>Square Footage <br> Sold</h2>
+                        <h3><span class="counter">1,951</span></h3>
+                    </li>
+                    <li class="counter-item">
+                        <h2>Square Footage <br> Managed</h2>
+                        <h3><span class="counter">856,936</span></h3>
+                    </li>
+                    <li class="counter-item">
+                        <h2>New Column <br> Transactions</h2>
+                        <h3>$ <span class="counter">1,151,324</span></h3>
+                    </li>
+                </ul>
+
+                <div class="tabnav-paddles">
+                    <button id="leftArrow" class="left-paddle paddle hidden">
+                        <span uk-icon="icon: chevron-left"></span>
+                    </button>
+                    <button id="rightArrow" class="right-paddle paddle">
+                        <span uk-icon="icon: chevron-right"></span>
+                    </button>
                 </div>
             </div>
 
@@ -32,7 +43,7 @@
     <section class="homepage-modules | uk-section uk-padding-remove-top">
         <div class="uk-container uk-container-large uk-overflow-hidden">
 
-            <div class="slider-wrapper" uk-slider>
+            <div class="slider-wrapper">
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
                     <div class="uk-slider-items uk-grid-small" uk-grid>

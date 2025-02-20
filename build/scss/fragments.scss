@@ -1,14 +1,14 @@
-//* Import Common Styles
-@import 'common/fonts', 
+// Import Common Styles
+@import 'common/fonts',
         'common/mixins', 
         'common/global';
 
-//* Import Components Styles
+// Import Components Styles
 @import 'components/footer',
         'components/header',
         'components/menu';
 
-//* Import Resets Styles
+// Import Resets Styles
 @import 'common/reset-wp',
         'common/reset-uikit';
 
@@ -24,256 +24,112 @@
     box-sizing: border-box;
 }
 
-.homepage {
-
-    .uk-cover-container {
-
-
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: rgba(#000,.45);
-            background-blend-mode: multiply;
-            @include size(100%);
-            z-index: 2;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 10px;
-            border: 1px solid rgba(#FFF,.3);
-            border-radius: 5px;
-            z-index: 2;
-        }
-    }
-
-    @media ( min-width: 960px ) {
-
-        .uk-cover-container {
-            // min-height: 960px !important;
-        }
-
-    }
-
-    .video-background {
-        position: absolute;
-        inset: 50% auto auto 50%;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .uk-container {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-block: 140px;
-        z-index: 3;
-    }
-
-    h1 {
-        font-size: clamp(2rem, 0rem + 5vw, 3rem);
-        font-weight: 800;
-        text-shadow: 0 1px 2px rgba(#000,.75);
-        line-height: 1;
-
-        .uk-text-small {
-            font-size: clamp(1.125rem, 0.375rem + 1.875vw, 1.5rem);
-            font-weight: 500;
-        }
-    }
-
-    .uk-card {
-        .uk-card-body {
-            font-size: 1.125rem;
-            font-weight: 300;
-            padding-bottom: 0;
-
-            h2 {
-                font-weight: 700;
-                font-size: clamp(1.5rem, 0.5rem + 2.5vw, 2rem);
-                text-transform: capitalize;
-                text-shadow: 0 1px 2px rgba(#000,.75);
-            }
-        }
-
-        .uk-card-footer a {
-            font-family: $face-regular;
-            font-size: 1rem;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: normal;
-            border-radius: 3px;
-
-            &:hover,
-            &:focus {
-                background-color: rgba(#BABCBD,.25);
-                border-color: #BABCBD;
-            }
-        }
-    }
-
-}
-
-.counter-wrapper {
-
-    .uk-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 115px;
-        overflow-y: hidden;
-    }
-
-    .counter-list {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        gap: 60px;
-        width: 100%;
-        height: 145px;
-        margin-bottom: -20px;
-        overflow-x: auto;
-        
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-y;
-        will-change: transform;
-    }
-
-    .uk-width-auto {
-        flex: 1 0 225px;
-    }
-
-    .uk-width-auto h2 {
-        position: relative;
-        font-family: $face-regular;
-        font-size: clamp(1.125rem, 0.9634rem + 0.5172vw, 1.5rem);
-        font-weight: 700;
-        color: $primary-clr;
-        text-transform: uppercase;
-        line-height: 1.2;
-        margin-bottom: 10px;
-        padding-left: 20px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 4px auto auto 0;
-            background-color: #BABCBD;
-            width: 5px;
-            height: 40px;
-        }
-    }
-
-    .uk-width-auto h3 {
-        position: relative;
-        font-size: clamp(1.5rem, 0.9643rem + 1.7143vw, 2.25rem);
-        font-weight: 800;
-        margin: 0;;
-    }
-
-    // .uk-width-medium p {
-    //     order: 1;
-    //     position: relative;
-    //     font-size: 1.5rem;
-    //     font-weight: 600;
-    //     line-height: 28px;
-    //     letter-spacing: normal;
-    //     max-width: 225px;
-    //     margin: 0;;
-    //     // padding-left: 50px;
-
-    //     // &::before {
-    //     //     content: '';
-    //     //     position: absolute;
-    //     //     top: 10px;
-    //     //     left: 0;
-    //     //     background-color: $primary-clr;
-    //     //     width: 30px;
-    //     //     height: 8px;
-    //     // }
-    // }
-
-}
-
-.homepage-modules {
-
-    figure.uk-cover-container {
-        border-radius: 5px;
-
-        canvas {
-            height: 350px;
-        }
-
-        &.uk-transition-toggle {
-            .uk-overlay-primary {
-                background: linear-gradient( rgba(#000,.35), rgba(#000,.35) );
-            }
-        }
-
-        &.uk-transition-toggle:hover {
-            .uk-overlay-primary {
-                background: linear-gradient( rgba(#000,.35), rgba(#000,.65) );
-                color: #FFF;
-            }
-        }        
-
-        .uk-overlay h2 {
-            font-family: $face-regular;
-            font-weight: 800;
-            font-size: 1.75rem;
+.brokerage-slider {
+    .uk-grid-headings {
+        h2 {
+            font-size: clamp(1.5rem, 1.375rem + 0.625vw, 2rem);
+            font-weight: 600;
+            color: #000;
             text-transform: uppercase;
-            @include sharpText;
+            line-height: 1;
+            letter-spacing: -.035em;
+            margin: 0;
+        }
+
+        a {
+            font-size: .875rem;
+            color: $btn-link;
+            text-transform: uppercase;
+            text-decoration: none;
         }
     }
 
-    .uk-slider-nav {
+    .uk-slider-items .uk-card {
+        .uk-card-media-top img {
+            border-radius: 5px;
+        }
+
+        .uk-card-body {
+            padding: 15px 0;
+        }
+
+        .uk-card-title {
+            font-size: 1rem;
+            // text-transform: uppercase;
+            line-height: 1.2;
+            margin-block: 15px;
+        }
+
+        small, a {
+            display: inline-block;
+        }
+
+        small {
+            font-size: .875rem;
+            color: rgba(#000,.8);
+            @include sharpText();
+        }
+
+        a {
+            font-size: .875rem;
+            color: $btn-link;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    .uk-slidenav {
         display: flex;
+        align-items: center;
         justify-content: center;
-        margin-block: 30px;
-    }
+        background-color: rgba($primary-clr,1);
+        color: rgba(#FFF,.9);
+        // max-width: 100%;
+        @include size(42px);
+        padding: 1em;
+        border-radius: 50%;
 
-    .uk-dotnav > * > * {
-        transition: all 300ms ease-in-out;
-    }
+        svg {
+            width: 11px;
+            height: 11px;
 
-    .uk-dotnav > .uk-active > * {
-        background-color: $primary-clr;
-        width: 30px;
-        border-radius: 5px;
-    }
-
-    @media ( min-width: 960px ) {
-
-        .uk-slider-nav {
-            display: none;
+            polyline { stroke-width: 3 }
         }
 
-        .slider-wrapper {
-            overflow: unset;
-            max-width: 100%;
+        &.uk-slidenav-next {
+            top: calc(50% - 75px);
+            left: auto !important;
+            right: 5px;
+        }
 
-            .uk-slider-items.uk-grid {
-                flex-wrap: wrap;
+        &.uk-slidenav-previous {
+            top: calc(50% - 75px);
+            left: 5px;
+        }
+    }
+
+    @media screen and ( min-width: 640px ) {
+        .uk-slider-items .uk-card .uk-card-title {
+            font-size: 1.125rem;
+        }
+
+        .uk-slidenav {
+            @include size(52px);
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            &.uk-slidenav-next {
+                top: calc(50% - 70px);
+                right: calc( -52px / 2 );
+            }
+
+            &.uk-slidenav-previous {
+                top: calc(50% - 70px);
+                left: calc( -52px / 2 );
             }
         }
-
-        figure.uk-cover-container canvas {
-            height: 400px;
-        }
-
     }
-
-    @media ( min-width: 1200px ) {
-
-        figure.uk-cover-container canvas {
-            height: 550px;
-        }
-
-    }
-
 }

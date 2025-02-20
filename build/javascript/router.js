@@ -9,7 +9,7 @@ var theme = {
         }
     },
 
-    new_homepage: {
+    home: {
         init: () => {
             jQuery.getScript( script + 'home.js' );
         }
@@ -20,6 +20,12 @@ var theme = {
             jQuery.getScript( script + 'faq.js' );
         }
     },
+
+    single_case_studies: {
+        init: () => {
+            jQuery.getScript( script + 'case-studies.js' );
+        }
+    }
 
 }
 

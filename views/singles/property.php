@@ -1,7 +1,8 @@
 <?php get_header(); 
 
 $property_info = get_field( 'property_info' );
-$property_details = get_field( 'property_description' );
+$property_description = get_field( 'property_description' );
+$property_details = get_field( 'property_details' );
 $property_contact = get_field( 'property_contact_persons' );
 $property_brochure = get_field( 'property_brochure' );
 $property_photos = get_field( 'property_photos' );
@@ -9,16 +10,12 @@ $property_video = get_field( 'property_yt_url' );
 $property_map = get_field( 'property_map' );
 $property_type = get_field( 'property_type' );
 $property_title = get_the_title();
-$property_id = get_the_ID();
+$property_id = get_the_ID(); ?>
 
-// echo '<pre>';
-// var_dump($property_contact);
-// echo '</pre>';
-?>
 <header data-fragment="hero" class="property-info | uk-position-relative">
     <div class="uk-container">
-        <div class="uk-grid-small uk-flex-bottom" uk-grid>
-            <div class="uk-width-2-3@m">
+        <div class="uk-grid-large uk-flex-bottom" uk-grid>
+            <div class="details | uk-width-expand@m">
                 <div class="uk-panel">
                     <address> <span uk-icon="icon: location"></span> <?php echo $property_info['address']; ?> <?php echo ( !empty($property_info['property_category']) ) ? ' | '.$property_info['property_category'] : ''; ?></address>
                     <h1 id="property-heading"><?php echo $property_title; ?></h1>
@@ -29,21 +26,26 @@ $property_id = get_the_ID();
                         } elseif ( $property_type['value'] == 'lease' ) {
                             $tag = 'Lease';
                         } ?>
-                        <?php echo $tag.' Price: $ '.$property_info['sale_price']; ?>
-                        <small> <span uk-icon="info"></span> <?php echo $property_info['price_description']; ?> </small>
+                        <?php echo $tag.' Price: $ '.$property_info['sale_price']; 
+
+                        if ( ! empty($property_info['price_description']) ) : ?>
+                            <small class="uk-display-block"> <span uk-icon="info" hidden></span> <?php echo $property_info['price_description']; ?> </small>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-            <div class="cta | uk-width-1-3@m">
+            <div class="cta | uk-width-auto@m">
                 <div class="uk-panel">
+                    <?php /*
                     <a hidden href="#" class="calendar | uk-button uk-button-primary">
                         <span class="uk-text-left"> Make Property <br> Viewing Appointment </span>
                     </a>
-                    <?php if ( $property_brochure ) : 
+                    */
+                    if ( $property_brochure ) : 
                     $url = wp_get_attachment_url( $property_brochure['ID'] ); ?>
-                    <a href="#gforms-brochure" uk-toggle class="brochure |  uk-button uk-button-primary"> 
-                        <span class="uk-text-left"> Download Brochure </span>
-                    </a>
+                        <a href="#gforms-brochure" uk-toggle class="brochure |  uk-button uk-button-primary"> 
+                            <span class="uk-text-left"> Download Brochure </span>
+                        </a>
                     <?php endif; ?>
                 </div>
             </div>
@@ -104,7 +106,13 @@ $property_id = get_the_ID();
                 <div class="uk-width-expand@m">
                     <h2>Property Description</h2>
                     <hr class="uk-divider-small uk-margin-medium-bottom">
-                    <?php echo $property_details; ?>
+                    <article class="uk-article uk-margin-large-bottom">
+                        <?php echo $property_details; ?>
+                    </article>
+
+                    <h3>Property Details</h3>
+                    <hr class="uk-divider-small uk-margin-medium-bottom">
+                    <?php echo $property_description; ?>
                 </div>
                 <div class="uk-width-auto@m">
                     <h2>Contacts</h2>
@@ -151,6 +159,8 @@ $property_id = get_the_ID();
 
     <section class="property-map | uk-section uk-padding-remove-top">
         <div class="uk-container">
+            <h2>Property Locations</h2>
+            <hr class="uk-divider-small uk-margin-medium-bottom">
             <div class="acf-map | uk-height-large" data-zoom="16">
                 <div class="marker" data-lat="<?php echo esc_attr($property_map['lat']); ?>" data-lng="<?php echo esc_attr($property_map['lng']); ?>"></div>
             </div>

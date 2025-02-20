@@ -27,7 +27,7 @@ $address = get_field( 'property_full_address' );
 
             <div class="uk-grid-large" uk-grid>
                 <div class="uk-width-1-4@m">
-                    <div class="uk-card uk-card-secondary uk-card-body uk-card-small uk-border-rounded uk-position-z-index" uk-sticky="end: !.case-study-post; offset: 40">
+                    <div class="uk-card uk-card-secondary uk-card-body uk-card-small uk-border-rounded uk-position-z-index">
                         <h3>Contents</h3>
                         <ul class="uk-list uk-list-divider">
                             <li><a href="#challenges" class="uk-link-reset" uk-scroll="offset: 100">Challenges</a></li>

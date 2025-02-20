@@ -16,11 +16,11 @@ $profile_bio         = get_field( 'profile_bio' );
 $profile_hdr_bg      = get_field( 'hdr_background' );
 
 ?>
-<header data-fragment="hero" class="profile-info | uk-position-relative uk-light" data-src="<?php echo $profile_hdr_bg['url']; ?>" uk-img>
-    <hgroup class="uk-container">
+<header data-fragment="hero" class="profile-info | uk-position-relative uk-background-cover uk-light" data-src="<?php echo $profile_hdr_bg['url']; ?>" uk-img>
+    <div class="uk-container">
         <h1><?php echo $profile_title; ?></h1>
         <h2><?php echo $profile_designation; echo ( $profile_pnominal ) ? ', <span>'.$profile_pnominal.'</span>' : ''; ?></h2>
-    </hgroup>
+    </div>
 </header>
 
 <main id="main" class="main" role="main">

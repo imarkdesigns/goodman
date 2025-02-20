@@ -142,6 +142,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/build\/scss\/components\/header-copy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/header-copy.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/build\/scss\/components\/header.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -824,6 +839,17 @@
       "sC" : 0,
       "tS" : 0
     },
+    "\/resources\/scripts\/case-studies.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/resources\/scripts\/case-studies.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/resources\/scripts\/counterup.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -842,6 +868,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/faq.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/resources\/scripts\/route\/case-studies.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/resources\/scripts\/case-studies.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -1062,6 +1099,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/fragments\/footer.php",
+      "oF" : 0
+    },
+    "\/views\/fragments\/header-copy.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/fragments\/header-copy.php",
       "oF" : 0
     },
     "\/views\/fragments\/header.php" : {

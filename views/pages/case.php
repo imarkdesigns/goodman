@@ -7,9 +7,10 @@
                 <?php do_action( 'case_list' ); ?>
             </div>
 
-
         </div>
     </section>
 
+    <?php
+    do_action( 'all_property_listings', 'uk-padding-remove-top' ); ?>
 
 </main>

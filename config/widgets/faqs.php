@@ -23,7 +23,7 @@ function faq_list() {
         // var_dump($faq);
         
             if ( $post_toggle ) : ?>
-                <li>
+                <li class="faqs-item">
                     <a href="#" class="uk-accordion-title"> <?php echo $post_title; ?> </a>
                     <div class="uk-accordion-content">
                         <?php echo $post_content; ?>
